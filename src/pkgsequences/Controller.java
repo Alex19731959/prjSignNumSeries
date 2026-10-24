@@ -4,7 +4,8 @@ public class Controller {
 
     public void showSeries() {
         NumericSeries series = new NumericSeries();
-        series.imprimeRepunidades();
+        series.imprimirRepunidades();
         series.imprimirNumerosLucas();
+        series.imprimirNumerosCrecientes();
     }
 }

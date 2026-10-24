@@ -7,7 +7,7 @@ public class NumericSeries {
      * Imprime una serie de numeros naturales compuesta unicamente por el numero 1, 
      * en la cual el primer numero es 1, el segundo es 11, el tercero es 111 y asi sucesivamente hasta llegar al numero ingresado por el usuario.
     */
-    public void imprimeRepunidades () {
+    public void imprimirRepunidades () {
         int numeroIngresado;
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese un numero: ");
@@ -21,6 +21,9 @@ public class NumericSeries {
         System.out.println();
     }
 
+    /**
+     * Imprime los primeros n numeros de la serie de Lucas.
+     */
     public void imprimirNumerosLucas(){
         int antecedente1 = 2;
         int antecedente2 = 1;
@@ -46,5 +49,19 @@ public class NumericSeries {
         }
         System.out.println();
     }
+
+    public void imprimirNumerosCrecientes(){
+        int numeroIngresado;
+        int numeroActual = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese un numero: ");
+        numeroIngresado = sc.nextInt();
+        for (int i = 0; i < numeroIngresado; i++) {
+            numeroActual = numeroActual + i;
+            System.out.print(numeroActual + " ");
+        }
+        System.out.println();
+    }
     
+
 }
