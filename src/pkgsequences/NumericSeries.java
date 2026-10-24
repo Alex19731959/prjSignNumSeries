@@ -11,7 +11,8 @@ public class NumericSeries {
     public void imprimirRepunidades () {
         int numeroIngresado;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un numero: ");
+        System.out.println("Ejercicio SN16. Repunidades");
+        System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
         for (int i = 1; i <= numeroIngresado; i++) {
             for (int j = 1; j <= i; j++) {
@@ -31,7 +32,8 @@ public class NumericSeries {
         int numeroActual;
         int numeroIngresado;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un numero: ");
+        System.out.println("Ejercicio SN17. Números de Lucas");
+        System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
         if (numeroIngresado == 1) {
             System.out.print(antecedente1);
@@ -59,7 +61,8 @@ public class NumericSeries {
         int numeroIngresado;
         int numeroActual = 1;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un numero: ");
+        System.out.println("Ejercicio SN18. Números Crecientes");
+        System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
         for (int i = 0; i < numeroIngresado; i++) {
             numeroActual = numeroActual + i;
@@ -75,7 +78,8 @@ public class NumericSeries {
     public void imprimirNumerosAlternados(){
         int numeroIngresado;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un numero: ");
+        System.out.println("Ejercicio SN19. Números Alternados");
+        System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
         for (int i = 1; i <= numeroIngresado; i++) {
             if (i % 2 == 0) {

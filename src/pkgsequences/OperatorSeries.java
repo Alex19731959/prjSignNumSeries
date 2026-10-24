@@ -11,7 +11,8 @@ public class OperatorSeries {
     public void imprimirNumerosEstrellas() {
         int numeroIngresado;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un numero: ");
+        System.out.println("Ejercicio SC15. Números Estrellas");
+        System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
         for (int i = 0; i < numeroIngresado; i++) {
             for (int j = 1; j <= i; j++) {
@@ -30,7 +31,8 @@ public class OperatorSeries {
         int numeroIngresado;
         String[] operadores = {"+", "-", "*", "/ ", "% "};
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese un numero: ");
+        System.out.println("Ejercicio SC17. Alternancia de Operadores");
+        System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
         for (int i = 0; i < numeroIngresado; i++) {
             System.out.print(operadores[i % operadores.length] + " ");
