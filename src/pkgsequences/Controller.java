@@ -15,5 +15,6 @@ public class Controller {
 
         OperatorSeries operatorSeries = new OperatorSeries();
         operatorSeries.imprimirNumerosEstrellas();
+        operatorSeries.imprimirAlternanciaOperadores();
     }
 }

@@ -13,7 +13,7 @@ public class OperatorSeries {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese un numero: ");
         numeroIngresado = sc.nextInt();
-        for (int i = 1; i <= numeroIngresado; i++) {
+        for (int i = 0; i < numeroIngresado; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
@@ -22,5 +22,20 @@ public class OperatorSeries {
         System.out.println();
     }
 
+    /**
+     * Imprime una serie de operadores matematicos alternando entre ellos.
+     * La serie de operadores es: +, -, *, /, % y se repite ciclicamente hasta llegar al numero ingresado por el usuario.
+     */
+    public void imprimirAlternanciaOperadores() {
+        int numeroIngresado;
+        String[] operadores = {"+", "-", "*", "/ ", "% "};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese un numero: ");
+        numeroIngresado = sc.nextInt();
+        for (int i = 0; i < numeroIngresado; i++) {
+            System.out.print(operadores[i % operadores.length] + " ");
+        }
+        System.out.println();
+    }
     
 }
