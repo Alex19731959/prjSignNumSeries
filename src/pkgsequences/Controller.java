@@ -7,6 +7,8 @@ public class Controller {
         LetterSeries letterSeries = new LetterSeries();
         letterSeries.imprimirAlternaciaAlfabeto();
 
+        MixedSeries mixedSeries = new MixedSeries();
+
         NumericSeries numericSeries = new NumericSeries();
         numericSeries.imprimirRepunidades();
         numericSeries.imprimirNumerosLucas();
