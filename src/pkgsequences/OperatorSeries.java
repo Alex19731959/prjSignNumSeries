@@ -14,7 +14,7 @@ public class OperatorSeries {
         System.out.println("Ejercicio SC15. Números Estrellas");
         System.out.print("Ingrese un número: ");
         numeroIngresado = sc.nextInt();
-        for (int i = 0; i < numeroIngresado; i++) {
+        for (int i = 1; i <= numeroIngresado; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }

@@ -3,5 +3,8 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "code-runner.executorMap": {
+        "java": "cd $workspaceRoot && javac -d bin -sourcepath src $fullFileName && java -cp bin $fileNameWithoutExt"
+    }
 }
