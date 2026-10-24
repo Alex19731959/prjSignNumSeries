@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class NumericSeries {
 
     /**
-     * Imprime una serie de numeros naturales compuesta unicamente por el numero 1, 
-     * en la cual el primer numero es 1, el segundo es 11, el tercero es 111 y asi sucesivamente hasta llegar al numero ingresado por el usuario.
+     * Imprime una serie de numeros naturales compuesta unicamente por el numero 1.
+     * Donde se repite el numero 1 de 1 a n veces, siendo n el numero ingresado por el usuario.
     */
     public void imprimirRepunidades () {
         int numeroIngresado;
@@ -50,6 +50,10 @@ public class NumericSeries {
         System.out.println();
     }
 
+    /**
+     * Imprime los primeros n numeros de la serie de numeros crecientes.
+     * Donde el primer termino es 1, y cada termino siguiente es la suma del termino anterior y su posicion en la serie.
+     */
     public void imprimirNumerosCrecientes(){
         int numeroIngresado;
         int numeroActual = 1;
@@ -62,6 +66,28 @@ public class NumericSeries {
         }
         System.out.println();
     }
+
+    /**
+     * Imprime los primeros n numeros de la serie de numeros alternados.
+     * Donde los numeros en posiciones impares son elevados al cuadrado y los numeros en posiciones pares son elevados al cubo.
+     */
+    public void imprimirNumerosAlternados(){
+        int numeroIngresado;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese un numero: ");
+        numeroIngresado = sc.nextInt();
+        for (int i = 1; i <= numeroIngresado; i++) {
+            if (i % 2 == 0) {
+                double resultado = Math.pow(i, 3);
+                System.out.print((int)resultado + " ");
+            } else {
+                double resultado = Math.pow(i, 2);
+                System.out.print((int)resultado + " ");
+            }
+        }
+        System.out.println();
+    }
+    
     
 
 }

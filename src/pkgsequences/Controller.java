@@ -7,5 +7,6 @@ public class Controller {
         series.imprimirRepunidades();
         series.imprimirNumerosLucas();
         series.imprimirNumerosCrecientes();
+        series.imprimirNumerosAlternados();
     }
 }
