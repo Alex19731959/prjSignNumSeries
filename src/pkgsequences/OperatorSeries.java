@@ -21,4 +21,6 @@ public class OperatorSeries {
         }
         System.out.println();
     }
+
+    
 }

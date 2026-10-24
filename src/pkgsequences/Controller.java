@@ -3,6 +3,10 @@ package pkgsequences;
 public class Controller {
 
     public void showSeries() {
+
+        LetterSeries letterSeries = new LetterSeries();
+        letterSeries.imprimirAlternaciaAlfabeto();
+
         NumericSeries numericSeries = new NumericSeries();
         numericSeries.imprimirRepunidades();
         numericSeries.imprimirNumerosLucas();
