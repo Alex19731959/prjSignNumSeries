@@ -18,6 +18,22 @@ public class OperatorSeries {
         }
         System.out.println();
     }
+    
+    /**
+     * Imprime una serie de signos agrupados, donde se imprime el signo "+" en grupos de 1 a n.
+     * La serie se repite hasta llegar al numero ingresado por el usuario.
+     * @param n
+     */
+    public void g2imprimirGruposSignos (int n) {
+        System.out.println("\nEjercicio SC02. Grupos de Signos");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("+"); 
+            }
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
 
     /**
      * Imprime una serie de numeros naturales compuesta unicamente por el caracter "*".
