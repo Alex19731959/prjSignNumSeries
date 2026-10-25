@@ -3,6 +3,27 @@ package pkgsequences;
 public class NumericSeries {
 
     /**
+     * Imprime la serie de fibonacci hasta n términos
+     * @param n
+     */
+    public void g2ImprimirFibonacci (int n){
+        System.out.println("\nEjercicio SN01. Fibonacci");
+        int a=0, b=1, fibonacci;
+        for(int i=0; i<n; i++)
+            {
+                if(i==0)fibonacci=a;
+                else if(i==1)fibonacci=b;
+                else{
+                    fibonacci = a+b;
+                    a=b;
+                    b=fibonacci;
+                }
+                System.out.print(fibonacci + " ");
+            }
+        System.out.println(); 
+    }
+    
+    /**
      * Imprime una serie de numeros naturales compuesta unicamente por el numero 1.
      * Donde se repite el numero 1 de 1 a n veces, siendo n el numero ingresado por el usuario.
      * @param n 
