@@ -8,6 +8,7 @@ public class Controller {
         letterSeries.g2imprimirAlternaciaAlfabeto(n);
 
         MixedSeries mixedSeries = new MixedSeries();
+        mixedSeries.g2imprimirLetrasSignosAlternados(n);
 
         NumericSeries numericSeries = new NumericSeries();
         numericSeries.g2imprimirRepunidades(n);
