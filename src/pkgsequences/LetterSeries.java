@@ -26,9 +26,9 @@ public class LetterSeries {
         System.out.println("\nEjercicio SC16. Alternancia de Letras");
         for (int i = 0; i < n; i++) {
             if (i % 2 != 0) {
-                System.out.print(letrasMayusculas[i % (letrasMinusculas.length)] + " ");
+                System.out.print(letrasMayusculas[i % (letrasMayusculas.length)] + " ");
             } else {
-                System.out.print(letrasMinusculas[i % (letrasMayusculas.length)] + " ");
+                System.out.print(letrasMinusculas[i % (letrasMinusculas.length)] + " ");
             }
         }
         System.out.println();
