@@ -10,5 +10,6 @@ public class App {
         n = sc.nextInt();
         Controller controller = new Controller();
         controller.showSeries(n);
+        sc.close();
     }
 }

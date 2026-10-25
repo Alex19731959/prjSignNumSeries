@@ -3,9 +3,51 @@ package pkgsequences;
 public class NumericSeries {
 
     /**
+     * Imprime los primeros n numeros de la serie de progresion aritmetica.
+     * Donde el primer termino es 3, y cada termino siguiente es la suma del termino anterior y 5.
+     * @param n numero de terminos de la serie a imprimir.
+     */
+    public void g2imprimirProgresion(int n) {
+        System.out.println("\nEjercicio SN08. Progresión aritmética");
+        for (int i = 0; i < n; i++) {
+            System.out.print(3 + 5 * i + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n numeros de la serie de potencias de 2.
+     * Donde el primer termino es 1, y cada termino siguiente es el doble del termino anterior.
+     * @param n numero de terminos de la serie a imprimir.
+     */
+    public void g2imprimirPotencias2(int n) {
+        System.out.println("\nEjercicio SN09. Potencias de 2");
+        for (int i = 1; i <= n; i++) {
+            System.out.print( (int) Math.pow(2, i) + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n numeros de la serie de potencias de 3.
+     * Donde el primer termino es 1, y cada termino siguiente es el triple del termino anterior.
+     * @param n numero de terminos de la serie a imprimir.
+     */
+
+    public void g2imprimirPotencias3(int n) {
+        System.out.println("\nEjercicio SN10. Potencias de 3");
+        for (int i = 1; i <= n; i++) {
+            System.out.print( (int) Math.pow(3, i) + " ");
+        }
+        System.out.println();
+    }
+
+
+
+    /**
      * Imprime una serie de numeros naturales compuesta unicamente por el numero 1.
      * Donde se repite el numero 1 de 1 a n veces, siendo n el numero ingresado por el usuario.
-     * @param n 
+     * @param n numero de repeticiones del numero 1 en la serie.
     */
     public void g2imprimirRepunidades (int n) {
         System.out.println("\nEjercicio SN16. Repunidades");

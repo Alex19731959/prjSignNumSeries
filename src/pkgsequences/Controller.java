@@ -12,6 +12,9 @@ public class Controller {
         mixedSeries.g2imprimirLetrasSignosAlternados(n);
 
         NumericSeries numericSeries = new NumericSeries();
+        numericSeries.g2imprimirProgresion(n);
+        numericSeries.g2imprimirPotencias2(n);
+        numericSeries.g2imprimirPotencias3(n);
         numericSeries.g2imprimirRepunidades(n);
         numericSeries.g2imprimirNumerosLucas(n);
         numericSeries.g2imprimirNumerosCrecientes(n);
