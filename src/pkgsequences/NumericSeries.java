@@ -36,6 +36,73 @@ public class NumericSeries {
     }
 
     /**
+     * Imprime los primeros n números de secuencia de Fibonacci sobre números impares
+     * @param n numero de términos de la serie a imprimir
+     */
+    public void g2ImprimirFibonacciSobreImpares(int n){
+        System.out.println("\nEjercicio SN03. Fibonacci sobre impares");
+        int a=0, b=1, fibonacci, impar;
+        for (int i=1; i<=n; i++){
+            if(i==1) fibonacci=0;
+            else if(i==2) fibonacci=1;
+            else{
+                fibonacci = a+b;
+                a=b;
+                b=fibonacci;
+            }
+            impar = (i*2)-1;
+            System.out.print(fibonacci + "/" + impar + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n números de secuencia de Fibonacci sobre números impares
+     * @param n numero de términos de la serie a imprimir
+     */
+    public void g2ImprimirFibonacciSobrePares(int n){
+        System.out.println("\nEjercicio SN03. Fibonacci sobre Pares");
+        int a=0, b=1, fibonacci, par;
+        for (int i=1; i<=n; i++){
+            if(i==1) fibonacci=0;
+            else if(i==2) fibonacci=1;
+            else{
+                fibonacci = a+b;
+                a=b;
+                b=fibonacci;
+            }
+            par = i*2;
+            System.out.print(fibonacci + "/" + par + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n números primos
+     * @param n número de terminos de la serie
+     */
+    public void g2ImprimirNumerosPrimos(int n){
+        System.out.println("\nEjercicio SN05. Números primos");
+        int esPrimo, contadorPrimos=0, num=2; 
+        while(contadorPrimos < n){
+            esPrimo=1;
+            for(int i=2; i*i<=num; i++){
+                if(num%i==0)
+                {
+                    esPrimo=0;
+                    break;
+                }
+            }
+            if(esPrimo==1){
+                System.out.print(num + " ");
+                contadorPrimos++;
+            }
+            num++;
+        }
+        System.out.println();
+    }
+    
+    /**
      * Imprime los primeros n numeros de la serie de progresion aritmetica.
      * Donde el primer termino es 3, y cada termino siguiente es la suma del termino anterior y 5.
      * @param n numero de terminos de la serie a imprimir.
