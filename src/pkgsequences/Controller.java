@@ -5,6 +5,7 @@ public class Controller {
     public void showSeries(int n) {
 
         LetterSeries letterSeries = new LetterSeries();
+        letterSeries.g2imprimirLetrasConsecutivas(n);
         letterSeries.g2imprimirAlternaciaAlfabeto(n);
 
         MixedSeries mixedSeries = new MixedSeries();

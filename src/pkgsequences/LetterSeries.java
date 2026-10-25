@@ -3,6 +3,19 @@ package pkgsequences;
 public class LetterSeries {
 
     /**
+     * Imprime una serie de letras consecutivas del alfabeto, donde se imprime la letra a hasta llegar a la letra z y repetir ciclicamente.
+     * @param n 
+     */
+    public void g2imprimirLetrasConsecutivas (int n) {
+        System.out.println("\nEjercicio SC06. Letras Consecutivas");
+        String[] letras = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+        for (int i = 0; i < n; i++) {
+            System.out.print(letras[i % letras.length] + " ");
+        }
+        System.out.println();
+    }
+
+    /**
      * Imprime una serie de letras del alfabeto alternando entre mayusculas y minusculas.
      * Donde se imprime la letra mayuscula en la posicion par y la letra minuscula en la posicion impar, hasta llegar a la letra Z y repetir ciclicamente.
      * @param n 
