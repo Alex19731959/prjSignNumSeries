@@ -24,13 +24,36 @@ public class OperatorSeries {
      * La serie se repite hasta llegar al numero ingresado por el usuario.
      * @param n
      */
-    public void g2imprimirGruposSignos (int n) {
+    public void g2imprimirGruposSignos1 (int n) {
         System.out.println("\nEjercicio SC02. Grupos de Signos");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("+"); 
             }
             System.out.print(" ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime una serie de signos agrupados, basados en la serie de Fibonacci, donde se imprime el signo "+" en grupos de 2 y 1, luego 3 y 2, luego 5 y 3, y asi sucesivamente.
+     * La serie se repite hasta llegar al numero ingresado por el usuario.
+     * @param n
+     */
+    public void g2imprimirGruposSignos2 (int n) {
+        System.out.println("\nEjercicio SC03. Grupos de Signos");
+        int a = 2;
+        int b = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= a; j++) {
+                System.out.print("+");
+            }
+            if (i < n) {
+                System.out.print(" ");
+            }
+            int temp = a;
+            a += b;
+            b = temp;
         }
         System.out.println();
     }
