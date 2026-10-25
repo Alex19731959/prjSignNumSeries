@@ -21,6 +21,7 @@ public class Controller {
         operatorSeries.g2imprimirGruposSignos1(n);
         operatorSeries.g2imprimirGruposSignos2(n);
         operatorSeries.g2imprimirOperadoresCiclicos(n);
+        operatorSeries.g2imprimirIndicadorDireccionalCiclo(n);
         operatorSeries.g2imprimirNumerosEstrellas(n);
         operatorSeries.g2imprimirAlternanciaOperadores(n);
     }
