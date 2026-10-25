@@ -3,6 +3,39 @@ package pkgsequences;
 public class NumericSeries {
     
     /**
+     * Imprime la serie de fibonacci hasta n términos
+     * @param n
+     */
+    public void g2ImprimirFibonacci (int n){
+        System.out.println("\nEjercicio SN01. Fibonacci");
+        int a=0, b=1, fibonacci;
+        for(int i=0; i<n; i++)
+            {
+                if(i==0)fibonacci=a;
+                else if(i==1)fibonacci=b;
+                else{
+                    fibonacci = a+b;
+                    a=b;
+                    b=fibonacci;
+                }
+                System.out.print(fibonacci + " ");
+            }
+        System.out.println(); 
+    }
+
+    /**
+     * Imprime los números impares alternados con 0
+     * @param n
+     */
+    public void g2ImprimirImparesAlternados(int n){
+        System.out.println("\nEjercicio SN02. Impares alternados con cero");
+        for(int i=1; i<=n; i++){
+            System.out.print(i%2==0?"0 ":i + " ");
+        }
+        System.out.println();
+    }
+
+    /**
      * Imprime los primeros n numeros de la serie de progresion aritmetica.
      * Donde el primer termino es 3, y cada termino siguiente es la suma del termino anterior y 5.
      * @param n numero de terminos de la serie a imprimir.
@@ -40,29 +73,6 @@ public class NumericSeries {
             System.out.print( (int) Math.pow(3, i) + " ");
         }
         System.out.println();
-    }
-
-
-
-    /**
-     * Imprime la serie de fibonacci hasta n términos
-     * @param n
-     */
-    public void g2ImprimirFibonacci (int n){
-        System.out.println("\nEjercicio SN01. Fibonacci");
-        int a=0, b=1, fibonacci;
-        for(int i=0; i<n; i++)
-            {
-                if(i==0)fibonacci=a;
-                else if(i==1)fibonacci=b;
-                else{
-                    fibonacci = a+b;
-                    a=b;
-                    b=fibonacci;
-                }
-                System.out.print(fibonacci + " ");
-            }
-        System.out.println(); 
     }
     
     /**
