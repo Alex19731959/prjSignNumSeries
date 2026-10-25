@@ -37,7 +37,7 @@ public class OperatorSeries {
 
     /**
      * Imprime una serie de signos agrupados, basados en la serie de Fibonacci, donde se imprime el signo "+" en grupos de 2 y 1, luego 3 y 2, luego 5 y 3, y asi sucesivamente.
-     * La serie se repite hasta llegar al numero ingresado por el usuario.
+     * La serie se repite hasta llegar al numero ingresado por el usuario aunque si se ingresa un N mayor o igual a 15, se imprimira una gran cantidad de signos "+" y se recomienda ingresar un numero menor a 15.
      * @param n
      */
     public void g2imprimirGruposSignos2 (int n) {
