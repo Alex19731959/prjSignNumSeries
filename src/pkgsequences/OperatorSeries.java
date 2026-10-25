@@ -4,6 +4,22 @@ import java.util.Scanner;
 
 public class OperatorSeries {
 
+    public void imprimirSignosAlternados() {
+        int numeroIngresado;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ejercicio SC01. Signos Alternados");
+        System.out.print("Ingrese un número: ");
+        numeroIngresado = sc.nextInt();
+        for (int i = 1; i <= numeroIngresado; i++) {
+            if (i % 2 == 0) {
+                System.out.print("- ");
+            } else {
+                System.out.print("+ ");
+            }
+        }
+        System.out.println();
+    }
+
     /**
      * Imprime una serie de numeros naturales compuesta unicamente por el caracter "*".
      * Donde se repite el caracter "*" de 1 a n veces, siendo n el numero ingresado por el usuario.
