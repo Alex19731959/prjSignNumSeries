@@ -2,22 +2,22 @@ package pkgsequences;
 
 public class Controller {
 
-    public void showSeries() {
+    public void showSeries(int n) {
 
         LetterSeries letterSeries = new LetterSeries();
-        letterSeries.imprimirAlternaciaAlfabeto();
+        letterSeries.g2imprimirAlternaciaAlfabeto(n);
 
         MixedSeries mixedSeries = new MixedSeries();
 
         NumericSeries numericSeries = new NumericSeries();
-        numericSeries.imprimirRepunidades();
-        numericSeries.imprimirNumerosLucas();
-        numericSeries.imprimirNumerosCrecientes();
-        numericSeries.imprimirNumerosAlternados();
+        numericSeries.g2imprimirRepunidades(n);
+        numericSeries.g2imprimirNumerosLucas(n);
+        numericSeries.g2imprimirNumerosCrecientes(n);
+        numericSeries.g2imprimirNumerosAlternados(n);
 
         OperatorSeries operatorSeries = new OperatorSeries();
-        operatorSeries.imprimirSignosAlternados();
-        operatorSeries.imprimirNumerosEstrellas();
-        operatorSeries.imprimirAlternanciaOperadores();
+        operatorSeries.g2imprimirSignosAlternados(n);
+        operatorSeries.g2imprimirNumerosEstrellas(n);
+        operatorSeries.g2imprimirAlternanciaOperadores(n);
     }
 }
