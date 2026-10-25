@@ -5,6 +5,7 @@ public class NumericSeries {
     /**
      * Imprime una serie de numeros naturales compuesta unicamente por el numero 1.
      * Donde se repite el numero 1 de 1 a n veces, siendo n el numero ingresado por el usuario.
+     * @param n 
     */
     public void g2imprimirRepunidades (int n) {
         System.out.println("\nEjercicio SN16. Repunidades");
@@ -19,6 +20,7 @@ public class NumericSeries {
 
     /**
      * Imprime los primeros n numeros de la serie de Lucas.
+     * @param n 
      */
     public void g2imprimirNumerosLucas(int n){
         int antecedente1 = 2;
@@ -46,6 +48,7 @@ public class NumericSeries {
     /**
      * Imprime los primeros n numeros de la serie de numeros crecientes.
      * Donde el primer termino es 1, y cada termino siguiente es la suma del termino anterior y su posicion en la serie.
+     * @param n
      */
     public void g2imprimirNumerosCrecientes(int n){
         int numeroActual = 1;
@@ -60,6 +63,7 @@ public class NumericSeries {
     /**
      * Imprime los primeros n numeros de la serie de numeros alternados.
      * Donde los numeros en posiciones impares son elevados al cuadrado y los numeros en posiciones pares son elevados al cubo.
+     * @param n 
      */
     public void g2imprimirNumerosAlternados(int n){
         System.out.println("\nEjercicio SN19. Números Alternados");

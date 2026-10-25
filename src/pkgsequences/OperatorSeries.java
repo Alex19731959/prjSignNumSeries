@@ -5,6 +5,7 @@ public class OperatorSeries {
     /**
      * Imprime una serie de signos alternados, donde se alterna entre el signo "+" y el signo "-".
      * La serie se repite hasta llegar al numero ingresado por el usuario.
+     * @param n 
      */
     public void g2imprimirSignosAlternados(int n) {
         System.out.println("\nEjercicio SC01. Signos Alternados");
@@ -21,6 +22,7 @@ public class OperatorSeries {
     /**
      * Imprime una serie de numeros naturales compuesta unicamente por el caracter "*".
      * Donde se repite el caracter "*" de 1 a n veces, siendo n el numero ingresado por el usuario.
+     * @param n 
      */
     public void g2imprimirNumerosEstrellas(int n) {
         System.out.println("\nEjercicio SC15. Números Estrellas");
@@ -36,6 +38,7 @@ public class OperatorSeries {
     /**
      * Imprime una serie de operadores matematicos alternando entre ellos.
      * La serie de operadores es: +, -, *, /, % y se repite ciclicamente hasta llegar al numero ingresado por el usuario.
+     * @param n 
      */
     public void g2imprimirAlternanciaOperadores(int n) {
         String[] operadores = {"+", "-", "*", "/ ", "% "};
