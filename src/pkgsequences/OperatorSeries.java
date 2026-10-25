@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class OperatorSeries {
 
+    /**
+     * Imprime una serie de signos alternados, donde se alterna entre el signo "+" y el signo "-".
+     * La serie se repite hasta llegar al numero ingresado por el usuario.
+     */
     public void imprimirSignosAlternados() {
         int numeroIngresado;
         Scanner sc = new Scanner(System.in);
