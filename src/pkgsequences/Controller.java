@@ -17,9 +17,10 @@ public class Controller {
         numericSeries.g2imprimirNumerosAlternados(n);
 
         OperatorSeries operatorSeries = new OperatorSeries();
+        operatorSeries.g2imprimirSignosAlternados(n);
         operatorSeries.g2imprimirGruposSignos1(n);
         operatorSeries.g2imprimirGruposSignos2(n);
-        operatorSeries.g2imprimirSignosAlternados(n);
+        operatorSeries.g2imprimirOperadoresCiclicos(n);
         operatorSeries.g2imprimirNumerosEstrellas(n);
         operatorSeries.g2imprimirAlternanciaOperadores(n);
     }
