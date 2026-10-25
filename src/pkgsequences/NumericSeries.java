@@ -61,7 +61,7 @@ public class NumericSeries {
      * @param n numero de términos de la serie a imprimir
      */
     public void g2ImprimirFibonacciSobrePares(int n){
-        System.out.println("\nEjercicio SN03. Fibonacci sobre Pares");
+        System.out.println("\nEjercicio SN04. Fibonacci sobre Pares");
         int a=0, b=1, fibonacci, par;
         for (int i=1; i<=n; i++){
             if(i==1) fibonacci=0;
@@ -102,6 +102,34 @@ public class NumericSeries {
         System.out.println();
     }
     
+    /**
+     * Imprime los primeros n números que son cuadrados perfectos
+     * @param n número de terminos de la serie
+     */
+    public void g2ImprimirCuadradosPerfectos(int n){
+        System.out.println("\nEjercicio SN06. Cuadrados perfectos");
+        for(int i=1; i<=n; i++)
+        {
+            System.out.print(i*i + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime la progresion aritmética +3 desde 1
+     * @param n número de terminos de la serie
+     */
+    public void g2ImprimirProgresionAritmetica1(int n){
+        System.out.println("\nEjercicio SN07. Progresión Aritmética");
+        int num=1, i=1;
+        do{
+            System.out.print(num + " ");
+            num+=3;
+            i++;
+        }while(i<=n);
+        System.out.println();
+    }
+
     /**
      * Imprime los primeros n numeros de la serie de progresion aritmetica.
      * Donde el primer termino es 3, y cada termino siguiente es la suma del termino anterior y 5.

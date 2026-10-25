@@ -17,6 +17,8 @@ public class Controller {
         numericSeries.g2ImprimirFibonacciSobreImpares(n);
         numericSeries.g2ImprimirFibonacciSobrePares(n);
         numericSeries.g2ImprimirNumerosPrimos(n);
+        numericSeries.g2ImprimirCuadradosPerfectos(n);
+        numericSeries.g2ImprimirProgresionAritmetica1(n);
         numericSeries.g2imprimirProgresion(n);
         numericSeries.g2imprimirPotencias2(n);
         numericSeries.g2imprimirPotencias3(n);
