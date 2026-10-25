@@ -1,7 +1,7 @@
 package pkgsequences;
 
 public class NumericSeries {
-
+    
     /**
      * Imprime los primeros n numeros de la serie de progresion aritmetica.
      * Donde el primer termino es 3, y cada termino siguiente es la suma del termino anterior y 5.
