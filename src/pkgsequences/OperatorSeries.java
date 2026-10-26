@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class OperatorSeries {
 
     private static final int N_DEFECTO = 15;
-    private static final int N_MAX_ESTRELLAS = 30;
-    private static final int N_MAX_OPERADORES = 50;
+    private static final int N_MAX_FIBONACCI = 47;
 
     /**
      * Imprime una serie de signos alternados, donde se alterna entre el signo "+" y el signo "-".
@@ -44,10 +43,15 @@ public class OperatorSeries {
     /**
      * Imprime una serie de signos agrupados, basados en la serie de Fibonacci, donde se imprime el signo "+" en grupos de 2 y 1, luego 3 y 2, luego 5 y 3, y asi sucesivamente.
      * La serie se repite hasta llegar al numero ingresado por el usuario aunque si se ingresa un N mayor o igual a 15, se imprimira una gran cantidad de signos "+" y se recomienda ingresar un numero menor a 15.
-     * @param n
+     * @param n 
      */
     public void g2imprimirGruposSignos2 (int n) {
         System.out.println("\nEjercicio SC03. Grupos de Signos");
+        if (n < 1 || n > N_MAX_FIBONACCI) {
+            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_FIBONACCI
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         int a = 2;
         int b = 1;
         for (int i = 1; i <= n; i++) {
@@ -93,16 +97,12 @@ public class OperatorSeries {
     }
 
     /**
-     * Imprime una serie de estrellas, de 1 a n asteriscos por término.
-     * @param n número de términos (1 a {@value #N_MAX_ESTRELLAS}); fuera de rango se usa {@value #N_DEFECTO}.
+     * Imprime una serie de numeros naturales compuesta unicamente por el caracter "*".
+     * Donde se repite el caracter "*" de 1 a n veces, siendo n el numero ingresado por el usuario.
+     * @param n 
      */
     public void g2imprimirNumerosEstrellas(int n) {
         System.out.println("\nEjercicio SC15. Números Estrellas");
-        if (n < 1 || n > N_MAX_ESTRELLAS) {
-            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_ESTRELLAS
-                    + ". Por defecto, se elige n = " + N_DEFECTO);
-            n = N_DEFECTO;
-        }
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -113,17 +113,13 @@ public class OperatorSeries {
     }
 
     /**
-     * Imprime n operadores matemáticos (+, -, *, /, %) repetidos cíclicamente.
-     * @param n número de operadores (1 a {@value #N_MAX_OPERADORES}); fuera de rango se usa {@value #N_DEFECTO}.
+     * Imprime una serie de operadores matematicos alternando entre ellos.
+     * La serie de operadores es: +, -, *, /, % y se repite ciclicamente hasta llegar al numero ingresado por el usuario.
+     * @param n 
      */
     public void g2imprimirAlternanciaOperadores(int n) {
         String[] operadores = {"+", "-", "*", "/ ", "% "};
         System.out.println("\nEjercicio SC17. Alternancia de Operadores");
-        if (n < 1 || n > N_MAX_OPERADORES) {
-            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_OPERADORES
-                    + ". Por defecto, se elige n = " + N_DEFECTO);
-            n = N_DEFECTO;
-        }
         for (int i = 0; i < n; i++) {
             System.out.print(operadores[i % operadores.length] + " ");
         }
@@ -145,6 +141,7 @@ public class OperatorSeries {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Solicitar el símbolo para la serie: ");
         char simbolo = scanner.next().charAt(0);
+        scanner.close();
 
         for (int pos = 0; pos < n; pos++) {
             int cantidad = (pos + 1) * 2;
