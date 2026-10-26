@@ -2,6 +2,9 @@ package pkgsequences;
 
 public class LetterSeries {
 
+    private static final int N_DEFECTO = 15;
+    private static final int N_MAX_ALFABETO = 52;
+    
     /**
      * Imprime una serie de letras consecutivas del alfabeto, donde se imprime la letra a hasta llegar a la letra z y repetir ciclicamente.
      * @param n numero de letras a imprimir
@@ -16,14 +19,18 @@ public class LetterSeries {
     }
 
     /**
-     * Imprime una serie de letras del alfabeto alternando entre mayusculas y minusculas.
-     * Donde se imprime la letra mayuscula en la posicion par y la letra minuscula en la posicion impar, hasta llegar a la letra Z y repetir ciclicamente.
-     * @param n imprime el numero de letras a imprimir
-    */
+     * Imprime n letras del alfabeto alternando minúsculas y mayúsculas, de forma cíclica.
+     * @param n número de letras (1 a {@value #N_MAX_ALFABETO}); fuera de rango se usa {@value #N_DEFECTO}.
+     */
     public void g2imprimirAlternaciaAlfabeto(int n){
         String[] letrasMayusculas = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
         String[] letrasMinusculas = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
         System.out.println("\nEjercicio SC16. Alternancia de Letras");
+        if (n < 1 || n > N_MAX_ALFABETO) {
+            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_ALFABETO
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         for (int i = 0; i < n; i++) {
             if (i % 2 != 0) {
                 System.out.print(letrasMayusculas[i % (letrasMayusculas.length)] + " ");
@@ -34,6 +41,7 @@ public class LetterSeries {
         System.out.println();
     }
 
+
     /**
      * Imprime cada letra minúscula consecutivamente, empezando con dos repeticiones
      * de la letra a y aumentando dos repeticiones por cada letra.
@@ -41,8 +49,8 @@ public class LetterSeries {
      */
     public void g2generarSerieAlfabetoSC08(int n){
 
-       System.out.println("\nEjercicio SC08. Alternancia de Letras del; Alfabeto");
-       if ((n - 1) + 'a' <= 'z') { 
+        System.out.println("\nEjercicio SC08. Alternancia de Letras del; Alfabeto");
+        if ((n - 1) + 'a' <= 'z') { 
         for (int i = 0; i < n; i++) { 
             char letra = (char) ('a' + i);
             int cantidad = (i + 1) * 2;
@@ -206,5 +214,6 @@ public class LetterSeries {
 
 
     }
+
 
 }

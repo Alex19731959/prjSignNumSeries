@@ -2,6 +2,13 @@ package pkgsequences;
 
 public class NumericSeries {
     
+    private static final int N_DEFECTO = 15;
+
+    private static final int N_MAX_REPUNIDADES = 30;
+    private static final int N_MAX_LUCAS = 45;
+    private static final int N_MAX_CRECIENTES = 100;
+    private static final int N_MAX_ALTERNADOS = 100;
+
     /**
      * Imprime la serie de fibonacci hasta n términos
      * @param n
@@ -246,34 +253,51 @@ public class NumericSeries {
     }
 
     /**
-     * Imprime una serie de numeros naturales compuesta unicamente por el numero 1.
-     * Donde se repite el numero 1 de 1 a n veces, siendo n el numero ingresado por el usuario.
-     * @param n numero de repeticiones del numero 1 en la serie.
-    */
-    public void g2imprimirRepunidades (int n) {
+     * Imprime las primeras n repunidades (1, 11, 111, ...).
+     * @param n número de términos (1 a {@value #N_MAX_REPUNIDADES}); fuera de rango se usa {@value #N_DEFECTO}.
+     */
+    public void g2imprimirRepunidades(int n) {
         System.out.println("\nEjercicio SN16. Repunidades");
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("1");
+        if (n > N_MAX_REPUNIDADES || n <= 0) {
+            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_REPUNIDADES
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("1");
+                }
+                System.out.print("  ");
             }
-            System.out.print("  ");
+            System.out.println();
+        } else {
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("1");
+                }
+                System.out.print("  ");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 
     /**
-     * Imprime los primeros n numeros de la serie de Lucas.
-     * @param n 
+     * Imprime los primeros n números de Lucas (2, 1, 3, 4, 7, ...).
+     * @param n número de términos (1 a {@value #N_MAX_LUCAS}); fuera de rango se usa {@value #N_DEFECTO}.
      */
-    public void g2imprimirNumerosLucas(int n){
+    public void g2imprimirNumerosLucas(int n) {
         int antecedente1 = 2;
         int antecedente2 = 1;
         int numeroActual;
         System.out.println("\nEjercicio SN17. Números de Lucas");
+        if (n < 1 || n > N_MAX_LUCAS) {
+            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_LUCAS
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         if (n == 1) {
             System.out.print(antecedente1);
-        } 
-        if (n== 2) {
+        }
+        if (n == 2) {
             System.out.print(antecedente1 + " " + antecedente2);
         }
         if (n > 2) {
@@ -289,13 +313,17 @@ public class NumericSeries {
     }
 
     /**
-     * Imprime los primeros n numeros de la serie de numeros crecientes.
-     * Donde el primer termino es 1, y cada termino siguiente es la suma del termino anterior y su posicion en la serie.
-     * @param n
+     * Imprime los primeros n números crecientes (1, 2, 4, 7, 11, ...).
+     * @param n número de términos (1 a {@value #N_MAX_CRECIENTES}); fuera de rango se usa {@value #N_DEFECTO}.
      */
-    public void g2imprimirNumerosCrecientes(int n){
+    public void g2imprimirNumerosCrecientes(int n) {
         int numeroActual = 1;
         System.out.println("\nEjercicio SN18. Números Crecientes");
+        if (n < 1 || n > N_MAX_CRECIENTES) {
+            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_CRECIENTES
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         for (int i = 0; i < n; i++) {
             numeroActual = numeroActual + i;
             System.out.print(numeroActual + " ");
@@ -304,24 +332,25 @@ public class NumericSeries {
     }
 
     /**
-     * Imprime los primeros n numeros de la serie de numeros alternados.
-     * Donde los numeros en posiciones impares son elevados al cuadrado y los numeros en posiciones pares son elevados al cubo.
-     * @param n 
+     * Imprime los primeros n números alternados (posición impar al cuadrado, par al cubo).
+     * @param n número de términos (1 a {@value #N_MAX_ALTERNADOS}); fuera de rango se usa {@value #N_DEFECTO}.
      */
-    public void g2imprimirNumerosAlternados(int n){
+    public void g2imprimirNumerosAlternados(int n) {
         System.out.println("\nEjercicio SN19. Números Alternados");
+        if (n < 1 || n > N_MAX_ALTERNADOS) {
+            System.out.println("El método acepta únicamente un parámetro n entre 1 y " + N_MAX_ALTERNADOS
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
                 double resultado = Math.pow(i, 3);
-                System.out.print((int)resultado + " ");
+                System.out.print((int) resultado + " ");
             } else {
                 double resultado = Math.pow(i, 2);
-                System.out.print((int)resultado + " ");
+                System.out.print((int) resultado + " ");
             }
         }
         System.out.println();
     }
-    
-    
-
 }
