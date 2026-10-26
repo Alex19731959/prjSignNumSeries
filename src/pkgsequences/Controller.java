@@ -5,6 +5,7 @@ public class Controller {
     public void showSeries(int n) {
 
         LetterSeries letterSeries = new LetterSeries();
+<<<<<<< HEAD
         letterSeries.g2imprimirLetrasConsecutivas(n);
         letterSeries.g2imprimirAlternaciaAlfabeto(n);
         letterSeries.g2generarSerieAlfabetoSC08(n);
@@ -14,10 +15,12 @@ public class Controller {
         letterSeries.g2generarSerieAlfabetoSC13(n);
         letterSeries.g2generarSerieAlfabetoSC14(n);
 
+=======
+>>>>>>> 094e049a1d6bd65d242155d50bd24c4188cb4956
         MixedSeries mixedSeries = new MixedSeries();
-        mixedSeries.g2imprimirLetrasSignosAlternados(n);
-
         NumericSeries numericSeries = new NumericSeries();
+        OperatorSeries operatorSeries = new OperatorSeries();
+
         numericSeries.g2ImprimirFibonacci(n);
         numericSeries.g2ImprimirImparesAlternados(n);
         numericSeries.g2ImprimirFibonacciSobreImpares(n);
@@ -37,14 +40,19 @@ public class Controller {
         numericSeries.g2imprimirNumerosLucas(n);
         numericSeries.g2imprimirNumerosCrecientes(n);
         numericSeries.g2imprimirNumerosAlternados(n);
-
-        OperatorSeries operatorSeries = new OperatorSeries();
         operatorSeries.g2imprimirSignosAlternados(n);
         operatorSeries.g2imprimirGruposSignos1(n);
         operatorSeries.g2imprimirGruposSignos2(n);
         operatorSeries.g2imprimirOperadoresCiclicos(n);
         operatorSeries.g2imprimirIndicadorDireccionalCiclo(n);
+        letterSeries.g2imprimirLetrasConsecutivas(n);
+        mixedSeries.g2imprimirLetrasSignosAlternados(n);
+
+        
+        //! Agregar las llamadas a los métodos de las series restantes aquí en orden SC08 al SC14
+
         operatorSeries.g2imprimirNumerosEstrellas(n);
+        letterSeries.g2imprimirAlternaciaAlfabeto(n);
         operatorSeries.g2imprimirAlternanciaOperadores(n);
         operatorSeries.g2ImprimirSerieParNumerosSC11(n);
     }
