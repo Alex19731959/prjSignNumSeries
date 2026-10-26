@@ -119,26 +119,29 @@ public class OperatorSeries {
     }
     
     /**
-     * Imprime una serie del simbolo que se solicite, imprimea una serie que tiene en cada posicion un numero par de simbolos
-     * Donde se repite el caracter "*" de 1 a n veces, siendo n el numero ingresado por el usuario.
-     * @param n 
+     * Imprime bloques del símbolo elegido por el usuario, aumentando de dos
+     * en dos la cantidad de símbolos de cada bloque.
+     * @param n cantidad de bloques
      */
     public void g2ImprimirSerieParNumerosSC11(int n){
+
+        if (n > 20) {
+            System.out.println("Error en SC11: el número de términos no puede ser mayor que 20.");
+            return;
+        }
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Solicitar el símbolo para la serie: ");
         char simbolo = scanner.next().charAt(0);
-        System.out.print("Ingresar cuántos términos desea mostrar: ");
-        int nTerminos = scanner.nextInt();
 
-        for (int pos = 0; pos < nTerminos; pos++) {
+        for (int pos = 0; pos < n; pos++) {
             int cantidad = (pos + 1) * 2;
 
             for (int j = 0; j < cantidad; j++) {
                 System.out.print(simbolo);
             }
 
-            if (pos < nTerminos - 1) {
+            if (pos < n - 1) {
                 System.out.print(", ");
             }
         }

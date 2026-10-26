@@ -5,24 +5,12 @@ public class Controller {
     public void showSeries(int n) {
 
         LetterSeries letterSeries = new LetterSeries();
-<<<<<<< HEAD
-        letterSeries.g2imprimirLetrasConsecutivas(n);
-        letterSeries.g2imprimirAlternaciaAlfabeto(n);
-        letterSeries.g2generarSerieAlfabetoSC08(n);
-        letterSeries.g2generarSerieAlfabetoSC09(n);
-        letterSeries.g2generarSerieAlfabetoSC10(n);
-        letterSeries.g2generarSerieVocalesSC12(n);
-        letterSeries.g2generarSerieAlfabetoSC13(n);
-        letterSeries.g2generarSerieAlfabetoSC14(n);
-
-=======
->>>>>>> 094e049a1d6bd65d242155d50bd24c4188cb4956
         MixedSeries mixedSeries = new MixedSeries();
         NumericSeries numericSeries = new NumericSeries();
         OperatorSeries operatorSeries = new OperatorSeries();
 
         numericSeries.g2ImprimirFibonacci(n);
-        numericSeries.g2ImprimirImparesAlternados(n);
+        numericSeries.g2ImprimirImparesAlternados(n); 
         numericSeries.g2ImprimirFibonacciSobreImpares(n);
         numericSeries.g2ImprimirFibonacciSobrePares(n);
         numericSeries.g2ImprimirNumerosPrimos(n);
@@ -47,13 +35,15 @@ public class Controller {
         operatorSeries.g2imprimirIndicadorDireccionalCiclo(n);
         letterSeries.g2imprimirLetrasConsecutivas(n);
         mixedSeries.g2imprimirLetrasSignosAlternados(n);
-
-        
-        //! Agregar las llamadas a los métodos de las series restantes aquí en orden SC08 al SC14
-
+        letterSeries.g2generarSerieAlfabetoSC08(n);
+        letterSeries.g2generarSerieAlfabetoSC09(n);
+        letterSeries.g2generarSerieAlfabetoSC10(n);
+        operatorSeries.g2ImprimirSerieParNumerosSC11(n);
+        letterSeries.g2generarSerieVocalesSC12(n);
+        letterSeries.g2generarSerieAlfabetoSC13(n);
+        letterSeries.g2generarSerieAlfabetoSC14(n);
         operatorSeries.g2imprimirNumerosEstrellas(n);
         letterSeries.g2imprimirAlternaciaAlfabeto(n);
         operatorSeries.g2imprimirAlternanciaOperadores(n);
-        operatorSeries.g2ImprimirSerieParNumerosSC11(n);
     }
 }
