@@ -169,7 +169,82 @@ public class NumericSeries {
         }
         System.out.println();
     }
-    
+
+    /**  
+    * Imprime los primeros n numeros de la serie de numeros oblongos.
+    * Donde el primer termino es 2, y cada termino siguiente es el producto del termino anterior y su posicion en la serie.
+    * @param n numero de terminos de la serie a imprimir.    
+    */
+
+    public void g2imprimirNumOblongos(int n) {
+        System.out.println("\nEjercicio SN11. Números oblongos");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i * (i + 1) + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n numeros de la serie de numeros triangulares.
+     * @param n numero de terminos de la serie a imprimir.
+     */
+    public void g2imprimirNumTriangulares(int n){
+        System.out.println("\nEjercicio SN12. Triangulares");
+        int temporal = 0;
+        for (int i = 1; i <= n; i++) {
+            temporal = temporal + i;
+            System.out.print(temporal + " ");
+        }
+        System.out.println();
+    }
+
+    /*  
+    * Imprime los primeros n numeros de la serie de factoriales.
+    * Donde el primer termino es 1, y cada termino siguiente es el producto del
+    * termino anterior y su posicion en la serie.
+    * @param n numero de terminos de la serie a imprimir.
+    */
+    public void g2impimirFactoriales(int n){
+        System.out.println("\nEjercicio SN13. Factoriales");
+        int temporal = 1;
+        for (int i = 1; i <= n; i++) {
+            temporal = temporal * i;
+            System.out.print(temporal + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n numeros de la serie de signos alternos.
+     * Donde los numeros en posiciones impares son positivos y los numeros en posiciones pares son negativos.
+     * @param n numero de terminos de la serie a imprimir.
+     */
+    public void g2imprimirSignosAlternos(int n) {
+        System.out.println("\nEjercicio SN14. Signos alternos");
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                System.out.print(-i + " ");
+            } else {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    /**
+     * Imprime los primeros n numeros de la serie de cuadrados desplazados.
+     * @param n numero de terminos de la serie a imprimir.
+     */
+    public void g2imprimirCuadradosDesplazados(int n) {
+        System.out.println("\nEjercicio SN15. Cuadrados desplazados");
+        int resultado = 0;
+        for (int i = 0; i < n; i++) {
+            resultado = 2 * i * i;
+            System.out.print(resultado + " ");
+        }
+        System.out.println();
+    }
+
     /**
      * Imprime una serie de numeros naturales compuesta unicamente por el numero 1.
      * Donde se repite el numero 1 de 1 a n veces, siendo n el numero ingresado por el usuario.

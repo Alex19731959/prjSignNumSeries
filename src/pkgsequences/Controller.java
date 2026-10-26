@@ -22,6 +22,11 @@ public class Controller {
         numericSeries.g2imprimirProgresion(n);
         numericSeries.g2imprimirPotencias2(n);
         numericSeries.g2imprimirPotencias3(n);
+        numericSeries.g2imprimirNumOblongos(n);
+        numericSeries.g2imprimirNumTriangulares(n);
+        numericSeries.g2impimirFactoriales(n);
+        numericSeries.g2imprimirSignosAlternos(n);
+        numericSeries.g2imprimirCuadradosDesplazados(n);
         numericSeries.g2imprimirRepunidades(n);
         numericSeries.g2imprimirNumerosLucas(n);
         numericSeries.g2imprimirNumerosCrecientes(n);
