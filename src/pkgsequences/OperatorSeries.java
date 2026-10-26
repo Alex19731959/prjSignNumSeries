@@ -1,5 +1,7 @@
 package pkgsequences;
 
+import java.util.Scanner;
+
 public class OperatorSeries {
 
     /**
@@ -116,4 +118,33 @@ public class OperatorSeries {
         System.out.println();
     }
     
+    /**
+     * Imprime una serie del simbolo que se solicite, imprimea una serie que tiene en cada posicion un numero par de simbolos
+     * Donde se repite el caracter "*" de 1 a n veces, siendo n el numero ingresado por el usuario.
+     * @param n 
+     */
+    public void g2ImprimirSerieParNumerosSC11(int n){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Solicitar el símbolo para la serie: ");
+        char simbolo = scanner.next().charAt(0);
+        System.out.print("Ingresar cuántos términos desea mostrar: ");
+        int nTerminos = scanner.nextInt();
+
+        for (int pos = 0; pos < nTerminos; pos++) {
+            int cantidad = (pos + 1) * 2;
+
+            for (int j = 0; j < cantidad; j++) {
+                System.out.print(simbolo);
+            }
+
+            if (pos < nTerminos - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+
+
+    }
 }

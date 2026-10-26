@@ -7,6 +7,12 @@ public class Controller {
         LetterSeries letterSeries = new LetterSeries();
         letterSeries.g2imprimirLetrasConsecutivas(n);
         letterSeries.g2imprimirAlternaciaAlfabeto(n);
+        letterSeries.g2generarSerieAlfabetoSC08(n);
+        letterSeries.g2generarSerieAlfabetoSC09(n);
+        letterSeries.g2generarSerieAlfabetoSC10(n);
+        letterSeries.g2generarSerieVocalesSC12(n);
+        letterSeries.g2generarSerieAlfabetoSC13(n);
+        letterSeries.g2generarSerieAlfabetoSC14(n);
 
         MixedSeries mixedSeries = new MixedSeries();
         mixedSeries.g2imprimirLetrasSignosAlternados(n);
@@ -40,5 +46,6 @@ public class Controller {
         operatorSeries.g2imprimirIndicadorDireccionalCiclo(n);
         operatorSeries.g2imprimirNumerosEstrellas(n);
         operatorSeries.g2imprimirAlternanciaOperadores(n);
+        operatorSeries.g2ImprimirSerieParNumerosSC11(n);
     }
 }
