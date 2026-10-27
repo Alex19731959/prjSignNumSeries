@@ -11,6 +11,10 @@ public class LetterSeries {
      */
     public void g2imprimirLetrasConsecutivas (int n) {
         System.out.println("\nEjercicio SC06. Letras Consecutivas");
+        if (n < 0) {
+            System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de letras consecutivas");
+            return;
+        }
         String[] letras = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
         for (int i = 0; i < n; i++) {
             System.out.print(letras[i % letras.length] + " ");

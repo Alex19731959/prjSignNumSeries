@@ -15,6 +15,10 @@ public class OperatorSeries {
      */
     public void g2imprimirSignosAlternados(int n) {
         System.out.println("\nEjercicio SC01. Signos Alternados");
+        if (n < 0) {
+            System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de signos alternados");
+            return;
+        }
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
                 System.out.print("- ");
@@ -32,6 +36,10 @@ public class OperatorSeries {
      */
     public void g2imprimirGruposSignos1 (int n) {
         System.out.println("\nEjercicio SC02. Grupos de Signos");
+        if (n < 0) {
+            System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de grupo de signos");
+            return;
+        }
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("+"); 
@@ -48,6 +56,10 @@ public class OperatorSeries {
      */
     public void g2imprimirGruposSignos2 (int n) {
         System.out.println("\nEjercicio SC03. Grupos de Signos");
+        if (n < 0) {
+            System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de grupo de signos");
+            return;
+        }
         if (n > 10) {
             System.out.println("Ya que el numero ingresado es mayor a 10, la serie se repetira en bloques para mantener la legibilidad y evitar el desbordamiento de la consola.");
         }
@@ -81,6 +93,10 @@ public class OperatorSeries {
      */
     public void g2imprimirOperadoresCiclicos (int n) {
         System.out.println("\nEjercicio SC04. Operadores Ciclicos");
+        if (n < 0) {
+            System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de operadores ciclicos");
+            return;
+        }
         String[] operadores = {"+", "-", "*", "/",};
         for (int i = 0; i < n; i++) {
             System.out.print(operadores[i % operadores.length] + " ");
@@ -95,6 +111,10 @@ public class OperatorSeries {
      */
     public void g2imprimirIndicadorDireccionalCiclo (int n) {
         System.out.println("\nEjercicio SC05. Indicador Direccional Ciclo");
+        if (n < 0) {
+            System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de indicador direccional ciclo");
+            return;
+        }
         String[] operadores = {"\\", "|", "/", "-", "|"};
         for (int i = 0; i < n; i++) {
             System.out.print(operadores[i % operadores.length] + " ");
