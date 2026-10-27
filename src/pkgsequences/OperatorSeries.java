@@ -43,18 +43,28 @@ public class OperatorSeries {
 
     /**
      * Imprime una serie de signos agrupados, basados en la serie de Fibonacci, donde se imprime el signo "+" en grupos de 2 y 1, luego 3 y 2, luego 5 y 3, y asi sucesivamente.
-     * La serie se repite hasta llegar al numero ingresado por el usuario aunque si se ingresa un N mayor o igual a 15, se imprimira una gran cantidad de signos "+" y se recomienda ingresar un numero menor a 15.
+     * La serie se repite hasta llegar al numero ingresado por el usuario, ademas se aplico una restriccion para que si el numero ingresado es mayor a 10, la serie se repita en bloques para mantener la legibilidad y evitar el desbordamiento de la consola.
      * @param n
      */
     public void g2imprimirGruposSignos2 (int n) {
         System.out.println("\nEjercicio SC03. Grupos de Signos");
+        if (n > 10) {
+            System.out.println("Ya que el numero ingresado es mayor a 10, la serie se repetira en bloques para mantener la legibilidad y evitar el desbordamiento de la consola.");
+        }
         int a = 2;
         int b = 1;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= a; j++) {
                 System.out.print("+");
             }
-            if (i < n) {
+            if (i % 10 == 0) {
+                System.out.println();
+                if (i < n) {
+                    a = 2;
+                    b = 1;
+                    continue;
+                }
+            } else if (i < n) {
                 System.out.print(" ");
             }
             int temp = a;
