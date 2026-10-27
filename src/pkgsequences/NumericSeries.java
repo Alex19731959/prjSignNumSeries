@@ -8,13 +8,20 @@ public class NumericSeries {
     private static final int N_MAX_LUCAS = 45;
     private static final int N_MAX_CRECIENTES = 100;
     private static final int N_MAX_ALTERNADOS = 100;
+    private static final int N_MAX_FIBONACCI = 45;
+    private static final int N_MAX_SERIENUMERICA = 100;
 
     /**
      * Imprime la serie de fibonacci hasta n términos
-     * @param n
+     * @param n desde 1 a {@value #N_MAX_FIBONACCI}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirFibonacci (int n){
         System.out.println("\nEjercicio SN01. Fibonacci");
+        if (n > N_MAX_FIBONACCI || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_FIBONACCI
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         int a=0, b=1, fibonacci;
         for(int i=0; i<n; i++)
             {
@@ -32,10 +39,15 @@ public class NumericSeries {
 
     /**
      * Imprime los números impares alternados con 0
-     * @param n
+     * @param n desde 1 a {@value #N_MAX_SERIENUMERICA}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirImparesAlternados(int n){
         System.out.println("\nEjercicio SN02. Impares alternados con cero");
+        if (n > N_MAX_SERIENUMERICA || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         for(int i=1; i<=n; i++){
             System.out.print(i%2==0?"0 ":i + " ");
         }
@@ -44,10 +56,15 @@ public class NumericSeries {
 
     /**
      * Imprime los primeros n números de secuencia de Fibonacci sobre números impares
-     * @param n numero de términos de la serie a imprimir
+     * @param n desde 1 a {@value #N_MAX_FIBONACCI}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirFibonacciSobreImpares(int n){
         System.out.println("\nEjercicio SN03. Fibonacci sobre impares");
+        if (n > N_MAX_FIBONACCI || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_FIBONACCI
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         int a=0, b=1, fibonacci, impar;
         for (int i=1; i<=n; i++){
             if(i==1) fibonacci=0;
@@ -65,10 +82,15 @@ public class NumericSeries {
 
     /**
      * Imprime los primeros n números de secuencia de Fibonacci sobre números impares
-     * @param n numero de términos de la serie a imprimir
+     * @param n desde 1 a {@value #N_MAX_FIBONACCI}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirFibonacciSobrePares(int n){
         System.out.println("\nEjercicio SN04. Fibonacci sobre Pares");
+        if (n > N_MAX_FIBONACCI || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_FIBONACCI
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         int a=0, b=1, fibonacci, par;
         for (int i=1; i<=n; i++){
             if(i==1) fibonacci=0;
@@ -86,10 +108,15 @@ public class NumericSeries {
 
     /**
      * Imprime los primeros n números primos
-     * @param n número de terminos de la serie
+     * @param n desde 1 a {@value #N_MAX_SERIENUMERICA}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirNumerosPrimos(int n){
         System.out.println("\nEjercicio SN05. Números primos");
+        if (n > N_MAX_SERIENUMERICA || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         int esPrimo, contadorPrimos=0, num=2; 
         while(contadorPrimos < n){
             esPrimo=1;
@@ -111,10 +138,15 @@ public class NumericSeries {
     
     /**
      * Imprime los primeros n números que son cuadrados perfectos
-     * @param n número de terminos de la serie
+     * @param n desde 1 a {@value #N_MAX_SERIENUMERICA}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirCuadradosPerfectos(int n){
         System.out.println("\nEjercicio SN06. Cuadrados perfectos");
+        if (n > N_MAX_SERIENUMERICA || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         for(int i=1; i<=n; i++)
         {
             System.out.print(i*i + " ");
@@ -124,10 +156,15 @@ public class NumericSeries {
 
     /**
      * Imprime la progresion aritmética +3 desde 1
-     * @param n número de terminos de la serie
+     * @param n desde 1 a {@value #N_MAX_SERIENUMERICA}; fuera de rango se usa {@value #N_DEFECTO}
      */
     public void g2ImprimirProgresionAritmetica1(int n){
         System.out.println("\nEjercicio SN07. Progresión Aritmética");
+        if (n > N_MAX_SERIENUMERICA || n < 0) {
+            System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
+                    + ". Por defecto, se elige n = " + N_DEFECTO);
+            n = N_DEFECTO;
+        }
         int num=1, i=1;
         do{
             System.out.print(num + " ");
