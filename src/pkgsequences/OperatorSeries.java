@@ -147,6 +147,11 @@ public class OperatorSeries {
      */
     public void g2ImprimirSerieParNumerosSC11(int n){
 
+        System.out.println("\nEjercicio SC11. Grupos de #");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if (n > 20) {
             System.out.println("Error en SC11: el número de términos no puede ser mayor que 20.");
             return;

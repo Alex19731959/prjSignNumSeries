@@ -49,7 +49,11 @@ public class LetterSeries {
      */
     public void g2generarSerieAlfabetoSC08(int n){
 
-        System.out.println("\nEjercicio SC08. Alternancia de Letras del; Alfabeto");
+        System.out.println("\nEjercicio SC08. Letras repetidas");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if ((n - 1) + 'a' <= 'z') { 
         for (int i = 0; i < n; i++) { 
             char letra = (char) ('a' + i);
@@ -76,7 +80,11 @@ public class LetterSeries {
      */
     public void g2generarSerieAlfabetoSC09 (int n){
 
-        System.out.println("\nEjercicio SC09");
+        System.out.println("\nEjercicio SC09. Letras repetidas");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if ((n - 1) + 'a' <= 'z') {
             for (int pos = 0; pos < n; pos++) {
                 char letra = (char) ('a' + pos);
@@ -106,7 +114,11 @@ public class LetterSeries {
 
     public void g2generarSerieAlfabetoSC10(int n) {
         
-        System.out.println("\nEjercicio SC10");
+        System.out.println("\nEjercicio SC10. Letras con repetición");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if ((n - 1) + 'a' <= 'z') {
             for (int pos = 0; pos < n; pos++) {
                 char letra = (char) ('a' + pos);
@@ -136,7 +148,11 @@ public class LetterSeries {
     
     public void g2generarSerieVocalesSC12 (int n){
 
-        System.out.println("\nEjercicio SC12");
+        System.out.println("\nEjercicio SC12. Vocales repetidas");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if (n > 20) {
             System.out.println("Error en SC12: el número de términos no puede ser mayor que 20.");
             return;
@@ -164,7 +180,11 @@ public class LetterSeries {
     
     public void g2generarSerieAlfabetoSC13 (int n){
 
-        System.out.println("\nEjercicio SC13");
+        System.out.println("\nEjercicio SC13. Letra repetida creciente");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if (n > 20) {
             System.out.println("Error en SC13: el número de términos no puede ser mayor que 20.");
             return;
@@ -196,7 +216,11 @@ public class LetterSeries {
     public void g2generarSerieAlfabetoSC14 (int n){
 
 
-        System.out.println("\nEjercicio SC14");
+        System.out.println("\nEjercicio SC14. Alfabeto");
+        if (n < 1) {
+            System.out.println("No se pudo ejecutar, ya que debe tener al menos 1 término.");
+            return;
+        }
         if (n > 20) {
             System.out.println("Error en SC14: el número de términos no puede ser mayor que 20.");
             return;
