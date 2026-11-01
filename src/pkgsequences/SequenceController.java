@@ -1,6 +1,6 @@
 package pkgsequences;
 
-public class Controller {
+public class SequenceController {
 
     public void showSeries(int n) {
 

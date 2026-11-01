@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import pkgsequences.Controller;
+import pkgsequences.SequenceController;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -8,7 +8,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese un parámetro n: ");
         n = sc.nextInt();
-        Controller controller = new Controller();
+        SequenceController controller = new SequenceController();
         controller.showSeries(n);
         sc.close();
     }
