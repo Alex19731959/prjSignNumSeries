@@ -17,7 +17,7 @@ public class FigureController {
         numericFigures.g2imprimirTrianguloPascalFila2(n);
         operatorFigures.g2imprimirEscaleraDescendente(n);
 
-        mixedFigures.g2imprimirTrianguloPascalModificado(n);
+        mixedFigures.g2EjecutarTrianguloPascalModificado(n);
     
     }
 }
