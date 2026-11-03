@@ -14,12 +14,14 @@ public class App {
         n1 = sc.nextInt();
         SequenceController controller = new SequenceController();
         controller.showSeries(n1);
+        sc.nextLine(); 
 
         System.out.println("\nFIGURES EXERCISES");
         System.out.print("Ingrese un parámetro n2: ");
         n2 = sc.nextInt();
         FigureController figuresController = new FigureController();
         figuresController.showFigures(n2);
+        sc.nextLine(); 
 
         System.out.println("\nLOADING EXERCISES");
         LoadingController loadingController = new LoadingController();
