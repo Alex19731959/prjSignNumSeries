@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import pkgautomata.AutomataController;
 import pkgfigures.FigureController;
 import pkgloading.LoadingController;
 import pkgsequences.SequenceController;
@@ -24,6 +25,10 @@ public class App {
         System.out.println("\nLOADING EXERCISES");
         LoadingController loadingController = new LoadingController();
         loadingController.showLoadingExercises2();
+
+        System.out.println("\nAUTOMATA EXERCISES");
+        AutomataController automataController = new AutomataController();
+        automataController.showAutomataExercises1();
 
         sc.close();
     }

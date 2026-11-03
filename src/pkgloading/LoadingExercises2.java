@@ -21,6 +21,10 @@ public class LoadingExercises2 {
 
     private static final int MAX_REPETICIONES_ANIMACION = 5;
 
+    /**
+     * Genera un arreglo de números aleatorios entre 0 y 10, que representan los niveles de la señal.
+     * @return matriz Un arreglo de enteros con los niveles de la señal.
+     */
     public int[] g2GenerarNumerosAleatoriosSenal(){
         int[] matriz = new int[NIVELES_MAX_SENAL];
         Random random = new Random();
@@ -37,6 +41,10 @@ public class LoadingExercises2 {
         return matriz;
     }
 
+    /**
+     * Genera una representación visual de la señal utilizando caracteres y colores.
+     * @param matriz Un arreglo de enteros con los niveles de la señal.
+     */
     public void g2GenerarSenal(int[] matriz){
         int numeroEspacios;
         System.out.println();
@@ -54,6 +62,9 @@ public class LoadingExercises2 {
         }
     }
 
+    /**
+     * Llama a los métodos g2GenerarNumerosAleatoriosSenal y g2GenerarSenal para generar e imprimir la señal simetrizada con colores.
+     */
     public void g2ImprimirSenal() {
         System.out.println("\nEjercicio L11. Señal simetrizada con colores");
         LoadingExercises2 obj = new LoadingExercises2();
@@ -61,6 +72,10 @@ public class LoadingExercises2 {
         obj.g2GenerarSenal(numeros);
     }
     
+    /**
+     * Genera un arreglo de números aleatorios entre 0 y 8, que representan la longitud de las barras sonoras.
+     * @return matriz Un arreglo de enteros con la longitud de las barras sonoras.
+     */
     public int[] g2GenerarNumerosAleatoriosBarras(){
         int[] matriz = new int[MAX_LARGO_BARRAS];
         Random random = new Random();
@@ -77,6 +92,10 @@ public class LoadingExercises2 {
         return matriz;
     }
 
+    /**
+     * Genera una representación visual de barras sonoras utilizando caracteres "=".
+     * @param matriz Un arreglo de enteros con la longitud de las barras sonoras.
+     */
     public void g2GenerarBarras(int[] matriz){
         System.out.println();
         for (int i = MAX_ANCHO_BARRAS; i >= 1; i--) {
@@ -92,6 +111,9 @@ public class LoadingExercises2 {
         }
     }
     
+    /**
+     * Llama a los métodos g2GenerarNumerosAleatoriosBarras y g2GenerarBarras para generar e imprimir las barras sonoras de longitud aleatoria.
+     */
     public void g2ImprimirBarras() {
         System.out.println("\nEjercicio L12. Barras sonoras de longitud aleatoria");
         LoadingExercises2 obj = new LoadingExercises2();
@@ -99,6 +121,11 @@ public class LoadingExercises2 {
         obj.g2GenerarBarras(numeros);
     }
 
+    /**
+     * Mueve la figura en la consola, agregando espacios a la izquierda según el valor de "espacios".
+     * @param figura
+     * @param espacios
+     */
     private void g2MovimientoFigura(String figura, int espacios) {
         System.out.print("\033[3;1H");
 
@@ -111,6 +138,10 @@ public class LoadingExercises2 {
         System.out.flush();
     }
 
+    /**
+     * Genera una animación de la figura en movimiento, desplazándola hacia la derecha y luego hacia la izquierda.
+     * @throws InterruptedException
+     */
     public void g2AnimacionFigura() throws InterruptedException {
         String figura = """
                    \\|||/
