@@ -97,13 +97,12 @@ public class CompilerExercises {
 
     /**
      * Lista de estados del autómata A06
-     * State6 : Q0, Q1, Q2, Q3
+     * State6 : Q0, Q1, Q2
      */
     public enum State6 {
         Q0, 
         Q1, 
-        Q2, 
-        Q3
+        Q2
     }
 
     /**
@@ -153,11 +152,9 @@ public class CompilerExercises {
                     if (tipo.equals("letra") || tipo.equals("numero") || tipo.equals("dolar") || tipo.equals("guion_bajo")) {
                         estado = State6.Q1;
                     } else {
-                        estado = State6.Q3;
+                        estado = State6.Q2;
                     }
                 }
-
-                case Q3 -> estado = State6.Q2;
 
                 case Q2 -> estado = State6.Q2;
             }
@@ -167,7 +164,7 @@ public class CompilerExercises {
             }
         }
 
-        return estado == State6.Q1 || estado == State6.Q3;
+        return estado == State6.Q1;
     }
 
     /**
@@ -197,6 +194,10 @@ public class CompilerExercises {
         return matcher.matches();
     }
 
+    /**
+     * Método que solicita al usuario ingresar una palabra reservada y valida si es aceptada por el autómata A07
+     * @return void
+     */
     public void g2EjecutarValidadorLenguaje() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio A07. Compilador para validar palabras reservadas.");
