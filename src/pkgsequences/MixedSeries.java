@@ -13,6 +13,9 @@ public class MixedSeries {
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de letras y signos alternados");
             return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de letras y signos alternados");
+            return;
         }
         String[] letras = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
         String[] signos = {"+", "-"};
