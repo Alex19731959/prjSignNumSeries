@@ -1,13 +1,19 @@
 package pkgstrings;
 
+import java.util.Scanner;
 public class StringExercises1 {
 
     /**
      * Cuenta la cantidad de vocales en una frase ingresada por el usuario.
      * @param frase
      */
-    public void g2contarVocales(String frase) {
+
+    public void g2contarVocales() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C01. Contar vocales");
+        System.out.print("Ingrese una frase para contar las vocales: ");
+        String frase = scanner.nextLine();
+
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -29,8 +35,12 @@ public class StringExercises1 {
      * Cuenta la cantidad de letras en una frase ingresada por el usuario.
      * @param frase
      */
-    public void g2contarLetras(String frase) {
+    public void g2contarLetras() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C02. Contar letras");
+        System.out.print("Ingrese una frase para contar las letras: ");
+        String frase = scanner.nextLine();
+
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -53,8 +63,12 @@ public class StringExercises1 {
      * @param frase
      * @param vocalStr
      */
-    public void g2eliminarVocales(String frase, String vocalStr) {
+    public void g2eliminarVocales() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C03. Eliminar vocales");
+        System.out.print("Ingrese una frase para eliminar las vocales: ");
+        String frase = scanner.nextLine();
+
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -62,6 +76,10 @@ public class StringExercises1 {
         } catch (NumberFormatException e) {
 
         }
+
+        System.out.print("Ingrese la vocal que desea eliminar: ");
+        String vocalStr = scanner.nextLine();
+
         if (vocalStr == null || vocalStr.isEmpty()) return;
         char vocal = Character.toLowerCase(vocalStr.charAt(0));
 
@@ -80,8 +98,12 @@ public class StringExercises1 {
      * @param frase
      * @param letraStr
      */
-    public void g2eliminarLetras(String frase, String letraStr) {
+    public void g2eliminarLetras() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C04. Eliminar letras");
+        System.out.print("Ingrese una frase para eliminar las letras: ");
+        String frase = scanner.nextLine();
+
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -89,6 +111,9 @@ public class StringExercises1 {
         } catch (NumberFormatException e) {
 
         }
+        System.out.print("Ingrese la letra que desea eliminar: ");
+        String letraStr = scanner.nextLine();
+        
         if (letraStr == null || letraStr.isEmpty()) return;
         char letra = Character.toLowerCase(letraStr.charAt(0));
 

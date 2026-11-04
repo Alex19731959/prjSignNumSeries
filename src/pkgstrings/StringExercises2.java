@@ -1,13 +1,18 @@
 package pkgstrings;
 
+import java.util.Scanner;
 public class StringExercises2 {
 
     /**
      * Invierte las vocales de una frase ingresada por el usuario y las convierte a mayúsculas.
      * @param frase
      */
-    public void g2invertirVocalesMayusculas(String frase) {
+    public void g2invertirVocalesMayusculas() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C05. Invertir vocales y convertir a mayúsculas");
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -32,8 +37,12 @@ public class StringExercises2 {
      * Invierte las letras alternadas de una frase ingresada por el usuario, convirtiendo las vocales a minúsculas y las consonantes a mayúsculas.
      * @param frase
      */
-    public void g2invertirLetrasAlternadas(String frase) {
+    public void g2invertirLetrasAlternadas() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C06. Invertir letras alternadas");
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -58,8 +67,12 @@ public class StringExercises2 {
      * Convierte una frase ingresada por el usuario a mayúsculas, eliminando la letra 'J'.
      * @param frase
      */
-    public void g2mayusculasSinJ(String frase) {
+    public void g2mayusculasSinJ() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C07. Convertir a mayúsculas sin la letra 'J'");
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+        
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -82,8 +95,14 @@ public class StringExercises2 {
      * @param respuestaUsuario
      * @param palabraOriginal
      */
-    public void g2anagrama(String respuestaUsuario, String palabraOriginal) {
+    public void g2anagrama() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C08. Anagrama");
+        System.out.print("Ingrese la primera frase: ");
+        String respuestaUsuario = scanner.nextLine();
+        System.out.print("Ingrese la segunda frase para verificar si es un anagrama: ");
+        String palabraOriginal = scanner.nextLine();
+
         try {
             Integer.parseInt(respuestaUsuario);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
@@ -123,8 +142,12 @@ public class StringExercises2 {
      * Alterna las mayúsculas y minúsculas de una frase ingresada por el usuario.
      * @param frase
      */
-    public void g2alternarMayusculasMinusculas(String frase) {
+    public void g2alternarMayusculasMinusculas() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio C09. Alternar mayúsculas y minúsculas");
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+        
         try {
             Integer.parseInt(frase);
             System.out.println("No se pudo procesar ya que se han ingresado un numero en lugar de una frase.");
