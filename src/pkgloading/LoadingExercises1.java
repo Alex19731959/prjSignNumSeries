@@ -8,6 +8,38 @@ public class LoadingExercises1 {
     private static final int MAX_REPETICIONES = 1;
     
     /**
+     * Método que imprime un indicador de carga desde 0 a 100% usando los signos \|/-|
+     * para simular un movimiento rotacional.
+     */
+    public void g2imprimirIndicadorCarga() {
+        System.out.println("\nEjercicio L01. Indicador de Carga Rotacional (0% a 100%)");
+        char[] signos = {'\\', '|', '/', '-'};
+        for (int porcentaje = 0; porcentaje <= 100; porcentaje++) {
+            char signo = (porcentaje == 100) ? '/' : signos[porcentaje % signos.length];
+            int posicionesLlenas = porcentaje * LONGUITUD / 100;
+            StringBuilder barra = new StringBuilder(LONGUITUD);
+            for (int j = 0; j < LONGUITUD; j++) {
+                if (j < posicionesLlenas) {
+                    barra.append('=');
+                } else if (j == posicionesLlenas && posicionesLlenas < LONGUITUD) {
+                    barra.append('>');
+                } else {
+                    barra.append(' ');
+                }
+            }
+            System.out.printf("\r     %c [%s] %d%%", signo, barra, porcentaje);
+            try {
+                Thread.sleep(15);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
+        System.out.println();
+    }
+
+
+    /**
      * Pide al usuario un carácter para la animación de carga y valida que sea un solo carácter no vacío
      * @return el carácter ingresado por el usuario
      * @param scanner

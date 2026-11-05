@@ -5,6 +5,7 @@ public class LoadingController {
     public void showLoadingExercises2() throws InterruptedException {
 
         LoadingExercises1 loadingExercises1 = new LoadingExercises1();
+        loadingExercises1.g2imprimirIndicadorCarga();
         loadingExercises1.g2ImprimirBarradeCarga();
         loadingExercises1.g2DesplazarCaracter();
         loadingExercises1.g2AnimarWaiting();
