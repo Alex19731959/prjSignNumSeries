@@ -14,6 +14,7 @@ public class App {
         int n1, n2,n3;
 
         Scanner sc = new Scanner(System.in);
+        
         System.out.println("\nSEQUENCES EXERCISES");
         System.out.print("Ingrese un parámetro n1: ");
         n1 = sc.nextInt();

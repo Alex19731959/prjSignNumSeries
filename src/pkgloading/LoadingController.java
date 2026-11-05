@@ -14,6 +14,7 @@ public class LoadingController {
         loadingExercises1.g2AnimarBarraRotacional();
         loadingExercises1.g2AnimarCargaNombre();
         loadingExercises1.g2AnimarCargaNombrePorLetra();
+        loadingExercises1.g2AnimarCargaArchivo();
 
         LoadingExercises2 loadingExercises2 = new LoadingExercises2();
 
