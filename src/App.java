@@ -12,10 +12,6 @@ public class App {
         int n1, n2;
 
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("\nRECURSIVE EXERCISES");
-        RecursiveController recursiveController = new RecursiveController();
-        recursiveController.showRecursiveExercises1();
         
         System.out.println("\nSEQUENCES EXERCISES");
         System.out.print("Ingrese un parámetro n1: ");
@@ -39,7 +35,9 @@ public class App {
         LoadingController loadingController = new LoadingController();
         loadingController.showLoadingExercises2();
 
-        
+        System.out.println("\nRECURSIVE EXERCISES");
+        RecursiveController recursiveController = new RecursiveController();
+        recursiveController.showRecursiveExercises1();
 
         System.out.println("\nAUTOMATA EXERCISES");
         AutomataController automataController = new AutomataController();
