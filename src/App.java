@@ -2,7 +2,9 @@ import java.util.Scanner;
 import pkgautomata.AutomataController;
 import pkgfigures.FigureController;
 import pkgloading.LoadingController;
+import pkgrecursive.RecursiveController;
 import pkgsequences.SequenceController;
+import pkgstrings.StringController;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -24,9 +26,17 @@ public class App {
         figuresController.showFigures(n2);
         sc.nextLine(); 
 
+        System.out.println("\nSTRING EXERCISES");
+        StringController stringController = new StringController();
+        stringController.showStringExercises1();
+        
         System.out.println("\nLOADING EXERCISES");
         LoadingController loadingController = new LoadingController();
         loadingController.showLoadingExercises2();
+
+        System.out.println("\nRECURSIVE EXERCISES");
+        RecursiveController recursiveController = new RecursiveController();
+        recursiveController.showRecursiveExercises1();
 
         System.out.println("\nAUTOMATA EXERCISES");
         AutomataController automataController = new AutomataController();

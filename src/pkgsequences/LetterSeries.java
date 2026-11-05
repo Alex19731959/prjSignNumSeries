@@ -14,6 +14,9 @@ public class LetterSeries {
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de letras consecutivas");
             return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de letras consecutivas");
+            return;
         }
         String[] letras = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
         for (int i = 0; i < n; i++) {

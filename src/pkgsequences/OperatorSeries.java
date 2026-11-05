@@ -18,6 +18,9 @@ public class OperatorSeries {
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de signos alternados");
             return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de signos alternados");
+            return;
         }
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
@@ -39,6 +42,9 @@ public class OperatorSeries {
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de grupo de signos");
             return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de grupo de signos");
+            return;
         }
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
@@ -58,6 +64,9 @@ public class OperatorSeries {
         System.out.println("\nEjercicio SC03. Grupos de Signos");
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de grupo de signos");
+            return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de grupo de signos");
             return;
         }
         if (n > 10) {
@@ -96,6 +105,9 @@ public class OperatorSeries {
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de operadores ciclicos");
             return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de operadores ciclicos");
+            return;
         }
         String[] operadores = {"+", "-", "*", "/",};
         for (int i = 0; i < n; i++) {
@@ -113,6 +125,9 @@ public class OperatorSeries {
         System.out.println("\nEjercicio SC05. Indicador Direccional Ciclo");
         if (n < 0) {
             System.out.println("El numero ingresado es negativo, por lo que no se puede generar la serie de indicador direccional ciclo");
+            return;
+        } else if (n == 0) {
+            System.out.println("El numero ingresado es cero, por lo que no se puede generar la serie de indicador direccional ciclo");
             return;
         }
         String[] operadores = {"\\", "|", "/", "-", "|"};
