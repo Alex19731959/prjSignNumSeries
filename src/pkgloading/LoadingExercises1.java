@@ -19,23 +19,13 @@ public class LoadingExercises1 {
         char[] signos = {'\\', '|', '/', '-'};
         for (int porcentaje = 0; porcentaje <= 100; porcentaje++) {
             char signo = (porcentaje == 100) ? '/' : signos[porcentaje % signos.length];
-            int posicionesLlenas = porcentaje * LONGITUD / 100;
-            StringBuilder barra = new StringBuilder(LONGITUD);
-            for (int j = 0; j < LONGITUD; j++) {
-                if (j < posicionesLlenas) {
-                    barra.append('=');
-                } else if (j == posicionesLlenas && posicionesLlenas < LONGITUD) {
-                    barra.append('>');
-                } else {
-                    barra.append(' ');
-                }
-            }
-            System.out.printf("\r%c [%s] %d%%", signo, barra, porcentaje);
+            System.out.printf("\r%c %3d%%", signo, porcentaje);
+            System.out.flush();
             try {
-                Thread.sleep(15);
+                Thread.sleep(60);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                return;
+                break;
             }
         }
         System.out.println();
