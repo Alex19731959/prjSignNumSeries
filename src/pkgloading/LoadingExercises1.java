@@ -1,11 +1,14 @@
 package pkgloading;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class LoadingExercises1 {
     
-    private static final int LONGUITUD = 20;
+    private static final int LONGITUD = 20;
     private static final int MAX_REPETICIONES = 1;
+    private static final String VERDE = "\u001B[32m";
+    private static final String RESET = "\u001B[0m";
     
     /**
      * Pide al usuario un carácter para la animación de carga y valida que sea un solo carácter no vacío
@@ -75,13 +78,13 @@ public class LoadingExercises1 {
         char caracter = pedirCaracter(scanner);
         
         for (int repeticiones = 1; repeticiones <= MAX_REPETICIONES; repeticiones++) {
-            for (int i = 0; i <= LONGUITUD; i++) {
+            for (int i = 0; i <= LONGITUD; i++) {
                 int porcentaje = (i * 5);
                 String barra = "";
                 for (int j = 0; j < i; j++) {
                     barra += caracter;
                 }
-                for (int j = 1; j <= (LONGUITUD-i); j++) {
+                for (int j = 1; j <= (LONGITUD-i); j++) {
                     barra += ' ';
                 }
                 System.out.printf("\r[%s] %3d%%", barra, porcentaje);
@@ -101,7 +104,7 @@ public class LoadingExercises1 {
         var scanner = new Scanner(System.in);
         char caracter = pedirCaracter(scanner);
         for (int repeticiones = 1; repeticiones <= MAX_REPETICIONES; repeticiones++) {
-            for (int i = 0; i <= LONGUITUD; i++) {
+            for (int i = 0; i <= LONGITUD; i++) {
                 int porcentaje = (i * 5);
                 String barra = "";
                 for (int j = 1; j <= i-1; j++) {
@@ -110,7 +113,7 @@ public class LoadingExercises1 {
                 if (i > 0) {
                     barra += caracter;
                 }
-                for (int j = 1; j <= (LONGUITUD-i); j++) {
+                for (int j = 1; j <= (LONGITUD-i); j++) {
                     barra += ' ';
                 }
                 System.out.printf("\r[%s] %3d%%", barra, porcentaje);
@@ -147,7 +150,7 @@ public class LoadingExercises1 {
     public void g2AnimarBarra() throws InterruptedException {
         System.out.println("\nEjercicio LN05. Animación de barra con punta");
         for (int repeticiones = 1; repeticiones <= MAX_REPETICIONES; repeticiones++) {
-            for (int i = 0; i <= LONGUITUD; i++) {
+            for (int i = 0; i <= LONGITUD; i++) {
                 int porcentaje = (i * 5);
                 String barra = "";
                 for (int j = 1; j <= i-1; j++) {
@@ -156,7 +159,7 @@ public class LoadingExercises1 {
                 if(i>0){
                     barra += (i%2 == 0) ? '>' : '-';
                 }
-                for (int j = 1; j <= (LONGUITUD-i); j++) {
+                for (int j = 1; j <= (LONGITUD-i); j++) {
                     barra += ' ';
                 }
                 System.out.printf("\r[%s] %3d%%", barra, porcentaje);
@@ -196,7 +199,7 @@ public class LoadingExercises1 {
     public void g2AnimarBarraRotacional() throws InterruptedException {
         System.out.println("\nEjercicio LN07. Animación de barra con punta rotacional");
         for (int repeticiones = 1; repeticiones <= MAX_REPETICIONES; repeticiones++) {
-            for (int i = 0; i <= LONGUITUD; i++) {
+            for (int i = 0; i <= LONGITUD; i++) {
                 int porcentaje = (i * 5), frame = i % 4;
                 String barra = "";
                 for (int j = 1; j <= i-1; j++) {
@@ -210,7 +213,7 @@ public class LoadingExercises1 {
                         default -> '-';
                     };
                 }
-                for (int j = 1; j <= (LONGUITUD-i); j++) {
+                for (int j = 1; j <= (LONGITUD-i); j++) {
                     barra += ' ';
                 }
                 System.out.printf("\r[%s] %3d%%", barra, porcentaje);
@@ -264,6 +267,32 @@ public class LoadingExercises1 {
                 barra += ' ';
             }
             System.out.printf("\r[%s] %3d%%", barra, porcentaje);
+            Thread.sleep(200);
+        }
+        System.out.println();
+    }
+
+    /**
+     * Generar un número random entre 10 y 100 para simular una carga de un archivo en kb. Ponerle color a la barra de carga y detener la carga al completar el valor.
+     * @throws InterruptedException
+     */
+    public void g2AnimarCargaArchivo() throws InterruptedException {
+        System.out.println("\nEjercicio LN10. Animación de carga de archivo");
+        var random = new Random();
+        float total = 10 + random.nextFloat() * (90);
+        System.out.println("Downloading ArchivoYarl-win_amd64.whl (" + (int)total + " kB)");
+
+        for (int i = 0; i <= LONGITUD; i++) {
+            float progreso = (i * total) / LONGITUD;
+            String barra = "";
+            for (int j = 1; j <= i; j++) {
+                barra += "-";
+            }
+            for (int j = 1; j <= LONGITUD - i; j++) {
+                barra += " ";
+            }
+
+            System.out.printf("\r%s%s%s %.2f / %.2f kB", VERDE, barra, RESET, progreso, total);
             Thread.sleep(200);
         }
         System.out.println();
