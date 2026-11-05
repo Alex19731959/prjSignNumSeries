@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import pkgarrays.ArrayController;
 import pkgautomata.AutomataController;
 import pkgfigures.FigureController;
 import pkgloading.LoadingController;
@@ -9,7 +11,7 @@ import pkgstrings.StringController;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("grupo-02\nIntegrantes:\n-imbaquingo.mateo\n-morillo.isaac\n-olalla.alexandra\n-placencia.isaac\n-redrovan.marcell");
-        int n1, n2;
+        int n1, n2,n3;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("\nSEQUENCES EXERCISES");
@@ -41,6 +43,13 @@ public class App {
         System.out.println("\nAUTOMATA EXERCISES");
         AutomataController automataController = new AutomataController();
         automataController.showAutomataExercises1();
+
+        System.out.println("\nARRAY EXERCISES");
+        System.out.print("Ingrese un parámetro n: ");
+        n3 = sc.nextInt();
+        sc.nextLine();
+        ArrayController arrayController = new ArrayController();
+        arrayController.showArrayExercises(n3);
 
         sc.close();
     }
