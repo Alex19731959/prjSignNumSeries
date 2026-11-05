@@ -30,7 +30,7 @@ public class LoadingExercises1 {
                     barra.append(' ');
                 }
             }
-            System.out.printf("\r     %c [%s] %d%%", signo, barra, porcentaje);
+            System.out.printf("\r%c [%s] %d%%", signo, barra, porcentaje);
             try {
                 Thread.sleep(15);
             } catch (InterruptedException e) {
