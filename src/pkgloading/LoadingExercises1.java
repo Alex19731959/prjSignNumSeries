@@ -11,22 +11,22 @@ public class LoadingExercises1 {
     private static final String RESET = "\u001B[0m";
     
     /**
-     * Método que imprime un indicador de carga desde 0 a 100% usando los signos \|/-|
-     * para simular un movimiento rotacional.
+     * L01) Imprime un indicador de carga de 0% a 100% en una sola línea. El
+     * signo cambia en cada porcentaje siguiendo el orden \ | / - para simular
+     * un giro, y al llegar a 100% se queda en '/'. No necesita parámetros.
+     *
+     * @throws InterruptedException Si se interrumpe la pausa entre porcentajes.
      */
-    public void g2imprimirIndicadorCarga() {
+    public void g2imprimirIndicadorCarga() throws InterruptedException {
         System.out.println("\nEjercicio L01. Indicador de Carga Rotacional (0% a 100%)");
         char[] signos = {'\\', '|', '/', '-'};
         for (int porcentaje = 0; porcentaje <= 100; porcentaje++) {
-            char signo = (porcentaje == 100) ? '/' : signos[porcentaje % signos.length];
-            System.out.printf("\r%c %3d%%", signo, porcentaje);
-            System.out.flush();
-            try {
-                Thread.sleep(60);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                break;
+            char signo = signos[porcentaje % 4];
+            if (porcentaje == 100) {
+                signo = '/';
             }
+            System.out.printf("\r%c %3d%%", signo, porcentaje);
+            Thread.sleep(60);
         }
         System.out.println();
     }
