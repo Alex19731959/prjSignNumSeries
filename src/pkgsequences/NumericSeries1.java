@@ -13,7 +13,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirFibonacci (int n){
         System.out.println("\nEjercicio SN01. Fibonacci");
-        if (n > N_MAX_FIBONACCI || n < 0) {
+        if (n > N_MAX_FIBONACCI || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_FIBONACCI
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -39,7 +39,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirImparesAlternados(int n){
         System.out.println("\nEjercicio SN02. Impares alternados con cero");
-        if (n > N_MAX_SERIENUMERICA || n < 0) {
+        if (n > N_MAX_SERIENUMERICA || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -56,7 +56,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirFibonacciSobreImpares(int n){
         System.out.println("\nEjercicio SN03. Fibonacci sobre impares");
-        if (n > N_MAX_FIBONACCI || n < 0) {
+        if (n > N_MAX_FIBONACCI || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_FIBONACCI
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -82,7 +82,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirFibonacciSobrePares(int n){
         System.out.println("\nEjercicio SN04. Fibonacci sobre Pares");
-        if (n > N_MAX_FIBONACCI || n < 0) {
+        if (n > N_MAX_FIBONACCI || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_FIBONACCI
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -108,7 +108,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirNumerosPrimos(int n){
         System.out.println("\nEjercicio SN05. Números primos");
-        if (n > N_MAX_SERIENUMERICA || n < 0) {
+        if (n > N_MAX_SERIENUMERICA || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -138,7 +138,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirCuadradosPerfectos(int n){
         System.out.println("\nEjercicio SN06. Cuadrados perfectos");
-        if (n > N_MAX_SERIENUMERICA || n < 0) {
+        if (n > N_MAX_SERIENUMERICA || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -156,7 +156,7 @@ public class NumericSeries1 {
      */
     public void g2ImprimirProgresionAritmetica1(int n){
         System.out.println("\nEjercicio SN07. Progresión Aritmética");
-        if (n > N_MAX_SERIENUMERICA || n < 0) {
+        if (n > N_MAX_SERIENUMERICA || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -177,7 +177,7 @@ public class NumericSeries1 {
      */
     public void g2imprimirProgresion(int n) {
         System.out.println("\nEjercicio SN08. Progresión aritmética");
-        if (n > N_MAX_SERIENUMERICA || n < 0) {
+        if (n > N_MAX_SERIENUMERICA || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;
@@ -195,7 +195,7 @@ public class NumericSeries1 {
      */
     public void g2imprimirPotencias2(int n) {
         System.out.println("\nEjercicio SN09. Potencias de 2");
-        if (n > N_MAX_SERIENUMERICA || n < 0) {
+        if (n > N_MAX_SERIENUMERICA || n < 1) {
             System.out.println("El método acepta un parámetro n entre 1 y " + N_MAX_SERIENUMERICA
                     + ". Por defecto, se elige n = " + N_DEFECTO);
             n = N_DEFECTO;

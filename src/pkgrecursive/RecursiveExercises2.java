@@ -63,7 +63,7 @@ public class RecursiveExercises2 {
     }
 
     /**
-     * Llama a los métodos potencia, conteoProgresivoHasta y conteoRegresivo para realizar los ejercicios recursivos.
+     * Llama al método potencia para realizar el ejercicio recursivo de potencia.
      */
     public void g2CalcularPotencia() {
         System.out.println("\nEjercicio R04. Potencia");
@@ -88,6 +88,9 @@ public class RecursiveExercises2 {
         System.out.println(base + " elevado a la " + (exponenteEsNegativo? "-" + exponente : exponente) + " es: " + (exponenteEsNegativo? "1/" + resultado : resultado));
     }
 
+    /**
+     * Llama al método conteoProgresivoHasta para realizar el ejercicio recursivo de conteo progresivo.
+     */
     public void g2ConteoProgresivoHasta() {
         System.out.println("\nEjercicio R05. Conteo progresivo hasta n");
         System.out.print("Ingrese un número entero positivo: ");
@@ -100,6 +103,9 @@ public class RecursiveExercises2 {
         conteoProgresivoHasta(n);
     }
 
+    /**
+     * Llama al método conteoRegresivo para realizar el ejercicio recursivo de conteo regresivo.
+     */
     public void g2ConteoRegresivoHasta() {
         System.out.println("\nEjercicio R06. Conteo regresivo hasta 0");
         System.out.print("Ingrese un número entero positivo: ");
