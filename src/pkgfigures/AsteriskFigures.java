@@ -1,16 +1,14 @@
 package pkgfigures;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class AsteriskFigures {
 
-     public static final int N_MAX = 50;
-     
+    public static final int N_MAX = 50;
+
     /**
-     * Método que imprime la Figura F1 (cuadrado hueco de asteriscos) evaluando posiciones.
+     * F1) Imprime un cuadrado hueco de asteriscos: solo se dibujan la primera
+     * y la última fila, y la primera y la última columna.
      *
-     * @param n Tamaño del cuadrado (mayor que 1).
+     * @param n Tamaño del lado del cuadrado (entre 2 y N_MAX).
      */
     public void g2imprimirFiguraF1(int n) {
         System.out.println("\nEjercicio F1. Cuadrado Hueco de Asteriscos");
@@ -31,9 +29,10 @@ public class AsteriskFigures {
     }
 
     /**
-     * Método que imprime la Figura F2 (marco cuadrado alternando '*' y '+') evaluando posiciones.
+     * F2) Imprime un marco cuadrado hueco que alterna '*' y '+': si la suma
+     * de la fila y la columna es par se imprime '*', si es impar se imprime '+'.
      *
-     * @param n Tamaño del marco cuadrado (mayor que 1).
+     * @param n Tamaño del lado del marco (entre 2 y N_MAX).
      */
     public void g2imprimirFiguraF2(int n) {
         System.out.println("\nEjercicio F2. Marco Cuadrado Alternando '*' y '+'");
@@ -58,9 +57,10 @@ public class AsteriskFigures {
     }
 
     /**
-     * Método que imprime la Figura F3 (triángulo rectángulo izquierdo) evaluando posiciones.
+     * F3) Imprime un triángulo rectángulo pegado a la izquierda: la fila i
+     * tiene i + 1 asteriscos.
      *
-     * @param n Número de filas del triángulo (mayor que 0).
+     * @param n Cantidad de filas del triángulo (entre 1 y N_MAX).
      */
     public void g2imprimirFiguraF3(int n) {
         System.out.println("\nEjercicio F3. Triángulo Rectángulo Izquierdo");
@@ -77,9 +77,10 @@ public class AsteriskFigures {
     }
 
     /**
-     * Método que imprime la Figura F4 (triángulo rectángulo derecho) evaluando posiciones.
+     * F4) Imprime un triángulo rectángulo pegado a la derecha: en cada fila
+     * primero se imprimen los espacios (n - 1 - i) y luego i + 1 asteriscos.
      *
-     * @param n Número de filas del triángulo (mayor que 0).
+     * @param n Cantidad de filas del triángulo (entre 1 y N_MAX).
      */
     public void g2imprimirFiguraF4(int n) {
         System.out.println("\nEjercicio F4. Triángulo Rectángulo Derecho");
@@ -88,21 +89,21 @@ public class AsteriskFigures {
             return;
         }
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (j >= n - 1 - i) {
-                    System.out.print("* ");
-                } else {
-                    System.out.print("  ");
-                }
+            for (int j = 0; j < n - 1 - i; j++) {
+                System.out.print("  ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
             }
             System.out.println();
         }
     }
 
     /**
-     * Método que imprime la Figura F5 (pirámide invertida centrada) evaluando posiciones.
+     * F5) Imprime una pirámide invertida centrada: en cada fila primero se
+     * imprimen i espacios y luego 2 * (n - i) - 1 asteriscos.
      *
-     * @param n Número de filas de la pirámide invertida (mayor que 0).
+     * @param n Cantidad de filas de la pirámide (entre 1 y N_MAX).
      */
     public void g2imprimirFiguraF5(int n) {
         System.out.println("\nEjercicio F5. Pirámide Invertida Centrada");
@@ -110,23 +111,22 @@ public class AsteriskFigures {
             System.out.println("El parámetro n debe estar entre 1 y " + N_MAX + ".");
             return;
         }
-        int columnas = 2 * n - 1;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < columnas - i; j++) {
-                if (j >= i) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 2 * (n - i) - 1; j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
     }
 
     /**
-     * Método que imprime la Figura F6 (pirámide centrada) evaluando posiciones.
+     * F6) Imprime una pirámide centrada: en cada fila primero se imprimen
+     * n - 1 - i espacios y luego 2 * i + 1 asteriscos.
      *
-     * @param n Número de filas de la pirámide (mayor que 0).
+     * @param n Cantidad de filas de la pirámide (entre 1 y N_MAX).
      */
     public void g2imprimirFiguraF6(int n) {
         System.out.println("\nEjercicio F6. Pirámide Centrada");
@@ -135,17 +135,13 @@ public class AsteriskFigures {
             return;
         }
         for (int i = 0; i < n; i++) {
-            int inicio = (n - 1) - i;
-            int fin = (n - 1) + i;
-            for (int j = 0; j <= fin; j++) {
-                if (j >= inicio) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
+            for (int j = 0; j < n - 1 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
     }
-
 }

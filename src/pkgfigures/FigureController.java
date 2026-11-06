@@ -9,6 +9,12 @@ public class FigureController {
         OperatorFigures operatorFigures = new OperatorFigures();
         AsteriskFigures asteriskFigures = new AsteriskFigures();
 
+        asteriskFigures.g2imprimirFiguraF1(n);
+        asteriskFigures.g2imprimirFiguraF2(n);
+        asteriskFigures.g2imprimirFiguraF3(n);
+        asteriskFigures.g2imprimirFiguraF4(n);
+        asteriskFigures.g2imprimirFiguraF5(n);
+        asteriskFigures.g2imprimirFiguraF6(n);
         operatorFigures.g2imprimirEscaleraDescendente(n);
         operatorFigures.g2imprimirEscaleraAscendente(n);
         operatorFigures.g2imprimirEscaleraAscendenteDescendente(n);
@@ -22,12 +28,6 @@ public class FigureController {
         numericFigures.g2imprimirXBinaria(n);
         numericFigures.g2imprimirTrianguloPascalFila2(n);
         mixedFigures.g2EjecutarTrianguloPascalModificado(n);
-        asteriskFigures.g2imprimirFiguraF1(n);
-        asteriskFigures.g2imprimirFiguraF2(n);
-        asteriskFigures.g2imprimirFiguraF3(n);
-        asteriskFigures.g2imprimirFiguraF4(n);
-        asteriskFigures.g2imprimirFiguraF5(n);
-        asteriskFigures.g2imprimirFiguraF6(n);
 
     }
 }
