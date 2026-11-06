@@ -33,7 +33,7 @@ public class ArraysExercises {
         }
 
         String[] palabras = pedirPalabras("Ingrese su nombre completo: ", 1);
-        int[] porcentajes = pedirPorcentajes(palabras.length);
+        int[] porcentajes = pedirPorcentajes(palabras);
 
         System.out.println(String.join(" ", palabras));
         System.out.println();
@@ -245,35 +245,30 @@ public class ArraysExercises {
     }
 
     /**
-     * Pide un porcentaje (entero entre 0 y 100) por cada palabra, todos en
-     * la misma línea separados por espacios. Repite la pregunta si algún
-     * dato no es válido.
+     * Pide un porcentaje (entero entre 0 y 100) por cada palabra, uno por
+     * línea. Repite la pregunta de una palabra si el dato no es válido.
      *
-     * @param cantidad Cantidad de porcentajes que se esperan.
+     * @param palabras Palabras para las que se piden los porcentajes.
      * @return Arreglo con los porcentajes ingresados.
      */
-    private int[] pedirPorcentajes(int cantidad) {
-        int[] porcentajes = new int[cantidad];
-        boolean valido;
-        do {
-            valido = true;
-            System.out.print("Ingrese el porcentaje de carga (" + cantidad + " valores entre 0 y 100): ");
-            String[] valores = scanner.nextLine().trim().split("\\s+");
-            if (valores.length != cantidad) {
-                valido = false;
-            }
-            for (int i = 0; i < cantidad && valido; i++) {
+    private int[] pedirPorcentajes(String[] palabras) {
+        int[] porcentajes = new int[palabras.length];
+        for (int i = 0; i < palabras.length; i++) {
+            boolean valido;
+            do {
+                valido = true;
+                System.out.print("Porcentaje de carga para \"" + palabras[i] + "\" (0 a 100): ");
                 try {
-                    porcentajes[i] = Integer.parseInt(valores[i]);
+                    porcentajes[i] = Integer.parseInt(scanner.nextLine().trim());
                     valido = porcentajes[i] >= 0 && porcentajes[i] <= 100;
                 } catch (NumberFormatException e) {
                     valido = false;
                 }
-            }
-            if (!valido) {
-                System.out.println("Porcentajes no válidos, inténtelo de nuevo.");
-            }
-        } while (!valido);
+                if (!valido) {
+                    System.out.println("Porcentaje no válido, inténtelo de nuevo.");
+                }
+            } while (!valido);
+        }
         return porcentajes;
     }
 
