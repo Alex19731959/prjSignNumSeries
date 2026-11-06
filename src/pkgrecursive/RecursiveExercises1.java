@@ -16,6 +16,11 @@ public class RecursiveExercises1 {
         }
     }
 
+    /**
+     * Pide al usuario ingresar un número y lo valida mediante un try-catch para calcular su factorial.
+     * @param nStr    
+     * @return
+     */
     public void g2factorial() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio R01. Factorial");
@@ -51,6 +56,12 @@ public class RecursiveExercises1 {
         }
     }
 
+    /**
+     * Pide al usuario ingresar dos números y los valida mediante un try-catch para calcular su suma.
+     * @param aStr
+     * @param bStr
+     * @return
+     */
     public void g2suma() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio R02. Suma recursiva");
@@ -85,6 +96,12 @@ public class RecursiveExercises1 {
         }
     }
     
+    /**
+     * Pide al usuario ingresar dos números y los valida mediante un try-catch para calcular su multiplicación.
+     * @param aStr
+     * @param bStr
+     * @return
+     */
     public void g2multiplicacion() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEjercicio R03. Multiplicación recursiva");
